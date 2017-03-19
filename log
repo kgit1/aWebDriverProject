@@ -1,3 +1,14 @@
-create new simple java project
-add package
-add empty main class
+	create new simple java project
+	add selenium libs
+		project-properties-External jar
+		
+	add package
+	add empty main class
+
+	add path driver for chrome browser hardcoded
+		System.setProperty("webdriver.chrome.driver", "D:/JavaProjects/selenium-java-3.3.1/chromedriver.exe");
+		
+		or better put driver to project root and
+	add path driver for chrome browser self navigate to project root drivers folder
+		System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"/drivers/chromedriver.exe");
+	
