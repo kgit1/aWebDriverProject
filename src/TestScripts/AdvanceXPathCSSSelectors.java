@@ -15,11 +15,40 @@ public class AdvanceXPathCSSSelectors {
 		// web browser.
 		WebDriver driver = new ChromeDriver();
 
-		driver.get("http://rediff.com");
+		driver.get("http://rediffmail.com");
 		// driver.get("http://google.com");
 		driver.manage().window().maximize();
 
-		
+		driver.findElement(By.xpath("//*[@id='signin_info']")).click();
+
+		// access field by css selector using field id
+		// driver.findElement(By.cssSelector("input[id='login1'")).sendKeys("buba");
+
+		// access field by css selector using field id but partial an "^" will
+		// mean same as starts-with()
+		// driver.findElement(By.cssSelector("input[id^='logi'")).sendKeys("buba");
+
+		// access field by css selector using field id but partial an "*" will
+		// mean same as contains()
+		driver.findElement(By.cssSelector("input[id*='ogi'")).sendKeys("buba");
+
+		// access field by css selector using field id short cut
+		// driver.findElement(By.cssSelector("#login1")).sendKeys("buba");
+
+		// access field by css selector using near by field class selector and
+		// than navigate to target
+		// driver.findElement(By.cssSelector("div[class='login-form'] div
+		// input[id='login1']")).sendKeys("buba");
+
+		// access field by css selector short cut using near by field class
+		// selector and than navigate to target
+		// driver.findElement(By.cssSelector(".login-form div
+		// #login1")).sendKeys("buba");
+
+		// "div class =1 div" - will access every divs inside div class=1
+		// "div class =1>div" - will access only level 1 inside divs inside div
+		// class=1
+
 	}
 
 }
