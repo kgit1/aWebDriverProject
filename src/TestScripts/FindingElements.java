@@ -10,8 +10,12 @@ import org.openqa.selenium.chrome.ChromeDriver;
 public class FindingElements {
 
 	public static void main(String[] args) {
+		// add path driver for chrome browser self navigate to project root lib
+		// folder
 		System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "/drivers/chromedriver.exe");
 
+		// The main interface to use for testing, which represents an idealised
+		// web browser.
 		WebDriver driver = new ChromeDriver();
 
 		// open page
@@ -19,7 +23,11 @@ public class FindingElements {
 		// maximize
 		driver.manage().window().maximize();
 
-		// find all elements with certain tag
+		// findElement gives as power to get list of all WebElements with
+		// certain pattern on the page and iterate through them end interact
+		// with them by index
+
+		// find all elements with "a" tag
 		List<WebElement> list = driver.findElements(By.tagName("a"));
 		// iterate through list
 		for (WebElement webElement : list) {

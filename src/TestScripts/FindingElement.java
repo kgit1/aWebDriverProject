@@ -7,8 +7,12 @@ import org.openqa.selenium.chrome.ChromeDriver;
 public class FindingElement {
 
 	public static void main(String[] args) {
+		// add path driver for chrome browser self navigate to project root lib
+		// folder
 		System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "/drivers/chromedriver.exe");
 
+		// The main interface to use for testing, which represents an idealised
+		// web browser.
 		WebDriver driver = new ChromeDriver();
 
 		// open page
@@ -31,8 +35,8 @@ public class FindingElement {
 
 		// driver.findElement(By.name(name))
 
-		 //find element by partial link
-		 driver.findElement(By.partialLinkText("Colors")).click();
+		// find element by partial link
+		driver.findElement(By.partialLinkText("Colors")).click();
 	}
 
 }
