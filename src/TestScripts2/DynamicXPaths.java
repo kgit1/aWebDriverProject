@@ -27,25 +27,21 @@ public class DynamicXPaths {
 		driver.findElement(By.xpath("//*[@id='uh-search-box']")).sendKeys("Selenium");
 		Thread.sleep(3000);
 
-		//get few times xpath of dynamic element by refreshing page
-		// *[@id="yui_3_18_0_4_1490046045009_1253"]
-		// *[@id="yui_3_18_0_4_1490046045009_1249"]
-		// *[@id="yui_3_18_0_4_1490046086231_1245"]
-		//*[@id="yui_3_18_0_4_1490046412869_1279"]
-		
-		//*[@id="yui_3_18_0_4_1490046484647_1306"]
-		//*[@id="yui_3_18_0_4_1490046549257_1279"]
-		//*[@id="yui_3_18_0_4_1490046568776_1295"]
-		//*[@id="yui_3_18_0_4_1490046607771_1228"]
-		//*[@id="yui_3_18_0_4_1490047031029_259"]
-//		List<WebElement> list = driver.findElements(By.xpath("//*[contains(@class,'yui3-aclist-item')]/li"));
-//		contains(@id,starts-with('uh-assist-link'))
-		List<WebElement> list = driver.findElements(By.xpath("//*[@id='uh-search']/form/table/tbody/tr/td/div/div/ul/li"));
+		// get few times xpath of dynamic element by refreshing page
+		// *[@id="yui_3_18_0_4_1490046484647_1306"]
+		// *[@id="yui_3_18_0_4_1490046549257_1279"]
+		// *[@id="yui_3_18_0_4_1490046568776_1295"]
+		// *[@id="yui_3_18_0_4_1490046607771_1228"]
+		// *[@id="yui_3_18_0_4_1490047031029_259"]
 
+		// and than just hardcode path to dynamic element because yahoo
+		// generates olmost same id's for any element on the page..lol
+		List<WebElement> list = driver
+				.findElements(By.xpath("//*[@id='uh-search']/form/table/tbody/tr/td/div/div/ul/li"));
 
 		list.get(4).click();
 		for (WebElement webElement : list) {
-			System.out.println("tag name: "+webElement.getTagName());
+			System.out.println("tag name: " + webElement.getTagName());
 		}
 
 	}
