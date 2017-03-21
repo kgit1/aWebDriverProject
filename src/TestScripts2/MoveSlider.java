@@ -14,7 +14,7 @@ import org.openqa.selenium.interactions.ClickAction;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.ui.Select;
 
-public class Drag {
+public class MoveSlider {
 
 	public static void main(String[] args) throws InterruptedException {
 		// add path driver for chrome browser self navigate to project root lib
@@ -26,23 +26,40 @@ public class Drag {
 		WebDriver driver = new ChromeDriver();
 
 		// open www.jqueryui.com/draggable/
-		driver.get("http://www.jqueryui.com/draggable/");
+		driver.get("http://www.jqueryui.com/slider/");
 		driver.manage().window().maximize();
+		// specifies the amount of time the driver should wait when searching
+		// for an element if it is not immediately present.
 		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 
 		driver.switchTo().frame(driver.findElement(By.tagName("iframe")));
 
-		WebElement drag = driver.findElement(By.xpath("//*[@id='draggable']"));
+		WebElement drag = driver.findElement(By.xpath("//*[@id='slider']/span"));
 		System.out.println(drag.getText());
 
 		// to drag element we need Actions object
 		// transfer our driver to Actions object
 		Actions action = new Actions(driver);
+
 		// use method moveTo() of actions to select our drag element
 		// use method dragAndDropBy to take chosen element and drag it by 150px
 		// x direction and 50 y direction
 		// use methods build() to build our action and perform() to perform
 		// programmed action
-		action.moveToElement(drag).dragAndDropBy(drag, 150, 150).build().perform();
+
+		//move slider 250 right
+		action.moveToElement(drag).dragAndDropBy(drag, 250, 0).build().perform();
+		Thread.sleep(5000);
+		//move slider 250 left
+		action.moveToElement(drag).dragAndDropBy(drag, -250, 0).build().perform();
+		//move slider 50 right
+		action.moveToElement(drag).dragAndDropBy(drag, 50, 0).build().perform();
+
+		// perform click hold and move
+		// Actions drag = new Actions(driver);
+		// drag.clickAndHold(all_source_element).build().perform();
+		// Thread.sleep(3500);
+		// drag.clickAndHold().moveToElement(destination).release(destination).build().perform();
+		// Thread.sleep(3500);
 	}
 }
