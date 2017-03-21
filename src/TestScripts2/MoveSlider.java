@@ -34,8 +34,7 @@ public class MoveSlider {
 
 		driver.switchTo().frame(driver.findElement(By.tagName("iframe")));
 
-		WebElement drag = driver.findElement(By.xpath("//*[@id='slider']/span"));
-		System.out.println(drag.getText());
+		WebElement slider = driver.findElement(By.xpath("//*[@id='slider']/span"));
 
 		// to drag element we need Actions object
 		// transfer our driver to Actions object
@@ -48,12 +47,12 @@ public class MoveSlider {
 		// programmed action
 
 		//move slider 250 right
-		action.moveToElement(drag).dragAndDropBy(drag, 250, 0).build().perform();
+		action.moveToElement(slider).dragAndDropBy(slider, 250, 0).build().perform();
 		Thread.sleep(5000);
 		//move slider 250 left
-		action.moveToElement(drag).dragAndDropBy(drag, -250, 0).build().perform();
+		action.moveToElement(slider).dragAndDropBy(slider, -250, 0).build().perform();
 		//move slider 50 right
-		action.moveToElement(drag).dragAndDropBy(drag, 50, 0).build().perform();
+		action.moveToElement(slider).dragAndDropBy(slider, 50, 0).build().perform();
 
 		// perform click hold and move
 		// Actions drag = new Actions(driver);
