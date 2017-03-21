@@ -41,7 +41,8 @@ public class Drag {
 		// use method moveTo() of actions to select our drag element
 		// use method dragAndDropBy to take chosen element and drag it by 150px
 		// x direction and 50 y direction
-		//use method perform() to perform programmed action
-		action.moveToElement(drag).dragAndDropBy(drag, 150, 150).perform();
+		// use methods build() to build our action and perform() to perform
+		// programmed action
+		action.moveToElement(drag).dragAndDropBy(drag, 150, 150).build().perform();
 	}
 }
