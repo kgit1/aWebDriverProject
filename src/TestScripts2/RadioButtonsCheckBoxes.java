@@ -24,7 +24,7 @@ public class RadioButtonsCheckBoxes {
 		// web browser.
 		WebDriver driver = new ChromeDriver();
 
-		// open yahoo.com
+		// open www.echoecho.com/htmlforms10.htm
 		driver.get("http://www.echoecho.com/htmlforms10.htm");
 		driver.manage().window().maximize();
 		// driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
