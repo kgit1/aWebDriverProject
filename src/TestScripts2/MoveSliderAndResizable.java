@@ -14,7 +14,7 @@ import org.openqa.selenium.interactions.ClickAction;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.ui.Select;
 
-public class MoveSlider {
+public class MoveSliderAndResizable {
 
 	public static void main(String[] args) throws InterruptedException {
 		// add path driver for chrome browser self navigate to project root lib
@@ -51,9 +51,28 @@ public class MoveSlider {
 		Thread.sleep(5000);
 		//move slider 250 left
 		action.moveToElement(slider).dragAndDropBy(slider, -250, 0).build().perform();
+		Thread.sleep(5000);
 		//move slider 50 right
 		action.moveToElement(slider).dragAndDropBy(slider, 50, 0).build().perform();
+		Thread.sleep(5000);
+		
+		
+		//get new page
+		driver.get("http://www.jqueryui.com/resizable/");
+		driver.manage().window().maximize();
+		// specifies the amount of time the driver should wait when searching
+		// for an element if it is not immediately present.
+		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 
+		driver.switchTo().frame(driver.findElement(By.tagName("iframe")));
+
+		//get dragable piece of resizable element
+		WebElement corner = driver.findElement(By.xpath("//*[@id='resizable']/div[3]"));
+		
+		Actions action1 = new Actions(driver);
+		
+		//drag corner to resize 
+		action1.moveToElement(corner).dragAndDropBy(corner, 100, 50).build().perform();
 		// perform click hold and move
 		// Actions drag = new Actions(driver);
 		// drag.clickAndHold(all_source_element).build().perform();
