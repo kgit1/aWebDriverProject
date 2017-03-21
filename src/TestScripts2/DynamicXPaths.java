@@ -1,12 +1,15 @@
 package TestScripts2;
 
+import java.io.File;
 import java.util.List;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.interactions.ClickAction;
+import org.openqa.selenium.remote.DesiredCapabilities;
 
 public class DynamicXPaths {
 
@@ -18,6 +21,13 @@ public class DynamicXPaths {
 		// The main interface to use for testing, which represents an idealised
 		// web browser.
 		WebDriver driver = new ChromeDriver();
+		
+		ChromeOptions chromeOptions = new ChromeOptions();
+		chromeOptions.addExtensions(new File(System.getProperty("user.dir") + "/drivers/xpath.crx"));
+
+		DesiredCapabilities capabilities = DesiredCapabilities.chrome();
+		capabilities.setCapability(ChromeOptions.CAPABILITY, chromeOptions);
+		driver = new ChromeDriver(capabilities);
 
 		// open yahoo.com
 		driver.get("http://yahoo.com");
@@ -35,10 +45,11 @@ public class DynamicXPaths {
 		// *[@id="yui_3_18_0_4_1490047031029_259"]
 
 		// and than just hardcode path to dynamic element because yahoo
-		// generates olmost same id's for any element on the page..lol
+		// generates almost same id's for any element on the page..lol
 		List<WebElement> list = driver
 				.findElements(By.xpath("//*[@id='uh-search']/form/table/tbody/tr/td/div/div/ul/li"));
 
+		//click 4th element in expanding search results window
 		list.get(4).click();
 		for (WebElement webElement : list) {
 			System.out.println("tag name: " + webElement.getTagName());

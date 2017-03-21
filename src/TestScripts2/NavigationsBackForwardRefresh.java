@@ -5,7 +5,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.ClickAction;
 
-public class Navigations {
+public class NavigationsBackForwardRefresh {
 
 	public static void main(String[] args) throws InterruptedException {
 		// add path driver for chrome browser self navigate to project root lib
