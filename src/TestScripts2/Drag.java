@@ -9,6 +9,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.interactions.ClickAction;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.ui.Select;
@@ -29,5 +30,18 @@ public class Drag {
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 
+		driver.switchTo().frame(driver.findElement(By.tagName("iframe")));
+
+		WebElement drag = driver.findElement(By.xpath("//*[@id='draggable']"));
+		System.out.println(drag.getText());
+
+		// to drag element we need Actions object
+		// transfer our driver to Actions object
+		Actions action = new Actions(driver);
+		// use method moveTo() of actions to select our drag element
+		// use method dragAndDropBy to take chosen element and drag it by 150px
+		// x direction and 50 y direction
+		//use method perform() to perform programmed action
+		action.moveToElement(drag).dragAndDropBy(drag, 150, 150).perform();
 	}
 }
