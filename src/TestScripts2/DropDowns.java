@@ -14,8 +14,8 @@ public class DropDowns {
 		// folder
 		System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "/drivers/chromedriver.exe");
 
-		// add path driver for chrome browser self navigate to project root lib
-		// folder
+		// The main interface to use for testing, which represents an idealised
+		// web browser.
 		WebDriver driver = new ChromeDriver();
 
 		// open http://rediff.com
