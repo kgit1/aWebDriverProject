@@ -40,18 +40,104 @@
 		driver.manage().window().maximize();
 	
 	
-	// To create .crx file for any extension install the extension in Google Chrome
-	// browser from Chrome Web Store.
+		To create .crx file for any extension install the extension in Google Chrome
+		browser from Chrome Web Store.
+		
+		Access the local folder path of chrome extension and copy the complete path
+		C:\Users\MYUSER\AppData\Local\Google\Chrome\User
+		Data\Default\Extensions\fdmmgilgnpjigdojojpjoooidkmcomcm\0.8.4.9_0.
+		
+		Enable Developer mode on Chrome Extension page.
+		
+		Click on Pack Extension button and enter the copied local folder path of your
+		desired extension in Extension Root Directory field.
+		
+		Click on Pack Extension button in pop up and verify the .crx file at location
+		mentioned in confirmation pop up.
 	
-	// Access the local folder path of chrome extension and copy the complete path
-	// C:\Users\MYUSER\AppData\Local\Google\Chrome\User
-	// Data\Default\Extensions\fdmmgilgnpjigdojojpjoooidkmcomcm\0.8.4.9_0.
+////// AutoIt ///////
+	AutoIt - tool to automate windows base applications
+	download AutoIt from https://www.autoitscript.com/site/autoit/downloads/
+	download AutoIt Script Editor from https://www.autoitscript.com/site/autoit-script-editor/downloads/
+	install both
 	
-	// Enable Developer mode on Chrome Extension page.
+	open both 
+	AutoIt3_x64.exe from D:\Program Files (x86)\AutoIt3
+	and SciTE.exe from D:\Program Files (x86)\AutoIt3\SciTE
 	
-	// Click on Pack Extension button and enter the copied local folder path of your
-	// desired extension in Extension Root Directory field.
+	in script editor - SciTe
+	File->New + File->Encoding UTF-8 with BOM
 	
-	// Click on Pack Extension button in pop up and verify the .crx file at location
-	// mentioned in confirmation pop up.
+	than open needed page - http://tinypic.com
+	click upload
+	use AutoIt -> click FinderTool and drag it on needed elements on 
+	uploading dialog window - file stroke and upload button
+	to get their title, class and instance for script
+	
+	SciTe -> type script
+	ControlFocus("Открытие","","Edit1")
+	ControlSetText("Открытие","","Edit1","D:\\Users\\erik\\Desktop\\Hanzo.jpeg")
+	ControlClick("Открытие","","Button1")
+	
+	save script
+	right click on script and compile script(x64) to get exe file
+	//ControlFocus() sets input focus to a given control on a window
+	
+	than we need to execute this exec when upload window opened	
+		driver.findElement(By.xpath("//*[@id='the_file']")).click();
+		Thread.sleep(5000);
+		Runtime.getRuntime().exec(System.getProperty("user.dir", "/scriptAutoIt/uploadScript.exe"));
+		
+	and together this will be like 
+		package TestScripts3;
+
+		import java.io.IOException;
+		import java.util.concurrent.TimeUnit;
+		
+		import org.openqa.selenium.By;
+		import org.openqa.selenium.WebDriver;
+		import org.openqa.selenium.WebElement;
+		import org.openqa.selenium.chrome.ChromeDriver;
+		
+		public class UploaderTest {
+		
+			public static void main(String[] args) throws InterruptedException, IOException {
+				System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "/drivers/chromedriver.exe");
+		
+				WebDriver driver = new ChromeDriver();
+		
+				driver.get("http://tinypic.com");
+				driver.manage().window().maximize();
+				driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
+		
+				// 1st method how to upload file through upload function on the page(but
+				// works not always)
+				// driver.findElement(By.xpath("//*[@id='the_file']")).sendKeys(System.getProperty("user.dir")+"/scriptAutoIt/Hanzo.jpeg");
+		
+				// 2nd method how to upload file through upload function on the page
+				// AutoIt - tool to automate windows base applications
+		
+				// to close add
+				// Thread.sleep(5000);
+				// driver.findElement(By.xpath("//*[@id='g367CB268B1094004A3689751E7AC568FFloatingBanner0']/div[1]/div[2]/div/span")).click();
+		
+				
+				WebElement element = driver.findElement(By.xpath("//*[@id='the_file']"));
+				element.click();
+				element.click();
+				Thread.sleep(5000);
+				// write full path to *.exe file
+				Runtime.getRuntime().exec("D:\\J\\workspace\\aWebDriverProject\\scriptAutoIt\\uploadScript.exe");
+		
+				// Every Java application has a single instance of class Runtime that
+				// allows the application to interface with the environment in which the
+				// application is running. The current runtime can be obtained from the
+				// getRuntime() method.
+				// exec() - Executes the specified string command in a separate process.
+			}
+		
+		}
+		
+	
+	
 	

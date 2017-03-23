@@ -1,4 +1,4 @@
-package TestScripts2;
+package TestScripts1;
 
 import java.io.File;
 
