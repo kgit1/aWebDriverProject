@@ -35,47 +35,43 @@ public class DatePicker {
 		String checkOutDay = splitterOut[0];
 
 		WebElement month;
+		List<WebElement> days;
 		for (;;) {
 			month = driver.findElement(By.xpath("//*[@id='overlayInnerDiv']/div/div[2]/table/thead/tr[1]/th"));
 			if (month.getText().equals(checkInMonth)) {
+				days = driver.findElements(By.xpath("//div[@class='month'][1]/table/tbody/tr/td"));
+				for (WebElement webElement : days) {
+					System.out.println(webElement.getText());
+					if (webElement.getText().equals(checkInDay)) {
+						webElement.click();
+						break;
+					}
+				}
 				break;
 			}
-			System.out.println(month.getText());
-			System.out.println("click");
+			// System.out.println(month.getText());
+			// System.out.println("click");
 			driver.findElement(By.xpath("//*[@id='overlayInnerDiv']/div/div[1]/span[2]")).click();
 			Thread.sleep(1000);
-		}
-
-		List<WebElement> days = driver.findElements(By.xpath("//div[@class='month'][1]/table/tbody/tr/td"));
-		for (WebElement webElement : days) {
-			System.out.println(webElement.getText());
-			if (webElement.getText().equals(checkInDay)) {
-				webElement.click();
-				break;
-			}
 		}
 
 		for (;;) {
 			month = driver.findElement(By.xpath("//*[@id='overlayInnerDiv']/div/div[2]/table/thead/tr[1]/th"));
 			if (month.getText().equals(checkOutMonth)) {
+				days = driver.findElements(By.xpath("//div[@class='month'][1]/table/tbody/tr/td"));
+				for (WebElement webElement : days) {
+					System.out.println(webElement.getText());
+					if (webElement.getText().equals(checkOutDay)) {
+						webElement.click();
+						break;
+					}
+				}
 				break;
 			}
-			System.out.println(month.getText());
-			System.out.println("click");
+			// System.out.println(month.getText());
+			// System.out.println("click");
 			driver.findElement(By.xpath("//*[@id='overlayInnerDiv']/div/div[1]/span[2]")).click();
 			Thread.sleep(1000);
 		}
-
-		days = driver.findElements(By.xpath("//div[@class='month'][1]/table/tbody/tr/td"));
-		// *[@id="overlayInnerDiv"]/div/div[2]/table/tbody
-		for (WebElement webElement : days) {
-			System.out.println(webElement.getText());
-			if (webElement.getText().equals(checkOutDay)) {
-				webElement.click();
-				break;
-			}
-		}
-
 	}
-
 }
