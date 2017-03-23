@@ -30,8 +30,9 @@ public class UploaderTest {
 		// Thread.sleep(5000);
 		// driver.findElement(By.xpath("//*[@id='g367CB268B1094004A3689751E7AC568FFloatingBanner0']/div[1]/div[2]/div/span")).click();
 
-		
 		WebElement element = driver.findElement(By.xpath("//*[@id='the_file']"));
+		// one click because of some reason doesn't work properly on this page
+		// so we use 2 of them
 		element.click();
 		element.click();
 		Thread.sleep(5000);
