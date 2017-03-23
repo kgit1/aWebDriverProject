@@ -22,7 +22,8 @@ public class DropDowns {
 		driver.get("http://rediff.com");
 		// maximize window
 		driver.manage().window().maximize();
-		// wait 5 seconds before pick next webElement
+		// specifies the amount of time the driver should wait when searching
+		// for an element if it is not immediately present.
 		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 
 		driver.findElement(By.xpath("//*[@id='signin_info']/a[2]")).click();

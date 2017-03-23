@@ -16,7 +16,10 @@ public class UploaderTest {
 		WebDriver driver = new ChromeDriver();
 
 		driver.get("http://tinypic.com");
+		// maximize window
 		driver.manage().window().maximize();
+		// specifies the amount of time the driver should wait when searching
+		// for an element if it is not immediately present.
 		driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
 
 		// 1st method how to upload file through upload function on the page(but

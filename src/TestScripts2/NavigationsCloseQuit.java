@@ -17,7 +17,10 @@ public class NavigationsCloseQuit {
 		// web browser.
 		WebDriver driver = new ChromeDriver();
 		driver.get("http://hdfcbank.com");
+		//maximize window
 		driver.manage().window().maximize();
+		// specifies the amount of time the driver should wait when searching
+		// for an element if it is not immediately present.
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		driver.findElement(By.xpath("//*[@id='loginsubmit']")).click();
 

@@ -26,8 +26,11 @@ public class RadioButtonsCheckBoxes {
 
 		// open www.echoecho.com/htmlforms10.htm
 		driver.get("http://www.echoecho.com/htmlforms10.htm");
+		// maximize window
 		driver.manage().window().maximize();
-		// driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+		// specifies the amount of time the driver should wait when searching
+		// for an element if it is not immediately present.
+		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 
 		// get web element by xpath
 		WebElement el = driver
@@ -66,7 +69,7 @@ public class RadioButtonsCheckBoxes {
 			System.out.println(" - " + webElement.getAttribute("value"));
 		}
 
-		//return selected webElement from list(radio buttons in example)
+		// return selected webElement from list(radio buttons in example)
 		// xpath short version
 		// get list of elements with back on 1 level xpath with refinement on
 		// input - [@name='group2']
@@ -76,16 +79,16 @@ public class RadioButtonsCheckBoxes {
 				System.out.println(" selected " + webElement.getAttribute("value"));
 			}
 		}
-		
-		//find webElement with attribute value = Water and click it
+
+		// find webElement with attribute value = Water and click it
 		list = driver.findElements(By.xpath("//*/input[@name='group2']"));
 		for (WebElement webElement : list) {
 			if (webElement.getAttribute("value").equals("Water")) {
 				webElement.click();
 			}
 		}
-		
-		//recheck which webElement selected now
+
+		// recheck which webElement selected now
 		list = driver.findElements(By.xpath("//*/input[@name='group2']"));
 		for (WebElement webElement : list) {
 			if (webElement.isSelected()) {
