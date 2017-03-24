@@ -1,73 +1,65 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="3" passed="3">
+<testng-results skipped="0" failed="0" ignored="0" total="9" passed="9">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="21" started-at="2017-03-24T19:42:33Z" finished-at="2017-03-24T19:42:33Z">
+  <suite name="Login suite" duration-ms="40" started-at="2017-03-24T20:19:32Z" finished-at="2017-03-24T20:19:32Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="21" started-at="2017-03-24T19:42:33Z" finished-at="2017-03-24T19:42:33Z">
-      <class name="testNG_1.TestNGAnnotation_1">
-        <test-method status="PASS" signature="beforeSuit()[pri:0, instance:testNG_1.TestNGAnnotation_1@29774679]" name="beforeSuit" is-config="true" duration-ms="6" started-at="2017-03-24T21:42:33Z" finished-at="2017-03-24T21:42:33Z">
+    <test name="Login test" duration-ms="40" started-at="2017-03-24T20:19:32Z" finished-at="2017-03-24T20:19:32Z">
+      <class name="testNG_1.LoginTest">
+        <test-method status="PASS" signature="testLoginViaEmail()[pri:0, instance:testNG_1.LoginTest@1d057a39]" name="testLoginViaEmail" duration-ms="6" started-at="2017-03-24T22:19:32Z" finished-at="2017-03-24T22:19:32Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- beforeSuit -->
-        <test-method status="PASS" signature="beforeTest()[pri:0, instance:testNG_1.TestNGAnnotation_1@29774679]" name="beforeTest" is-config="true" duration-ms="1" started-at="2017-03-24T21:42:33Z" finished-at="2017-03-24T21:42:33Z">
+        </test-method> <!-- testLoginViaEmail -->
+        <test-method status="PASS" signature="testLoginViaFacebook()[pri:0, instance:testNG_1.LoginTest@1d057a39]" name="testLoginViaFacebook" duration-ms="1" started-at="2017-03-24T22:19:32Z" finished-at="2017-03-24T22:19:32Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- beforeTest -->
-        <test-method status="PASS" signature="beforeClass()[pri:0, instance:testNG_1.TestNGAnnotation_1@29774679]" name="beforeClass" is-config="true" duration-ms="0" started-at="2017-03-24T21:42:33Z" finished-at="2017-03-24T21:42:33Z">
+        </test-method> <!-- testLoginViaFacebook -->
+        <test-method status="PASS" signature="testLoginViaTwitter()[pri:0, instance:testNG_1.LoginTest@1d057a39]" name="testLoginViaTwitter" duration-ms="1" started-at="2017-03-24T22:19:32Z" finished-at="2017-03-24T22:19:32Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- beforeClass -->
-        <test-method status="PASS" signature="beforemethod()[pri:0, instance:testNG_1.TestNGAnnotation_1@29774679]" name="beforemethod" is-config="true" duration-ms="1" started-at="2017-03-24T21:42:33Z" finished-at="2017-03-24T21:42:33Z">
+        </test-method> <!-- testLoginViaTwitter -->
+      </class> <!-- testNG_1.LoginTest -->
+      <class name="testNG_1.SignUpTest">
+        <test-method status="PASS" signature="signUpViaEmail()[pri:0, instance:testNG_1.SignUpTest@224edc67]" name="signUpViaEmail" duration-ms="3" started-at="2017-03-24T22:19:32Z" finished-at="2017-03-24T22:19:32Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- beforemethod -->
-        <test-method status="PASS" signature="test1()[pri:0, instance:testNG_1.TestNGAnnotation_1@29774679]" name="test1" duration-ms="3" started-at="2017-03-24T21:42:33Z" finished-at="2017-03-24T21:42:33Z">
+        </test-method> <!-- signUpViaEmail -->
+        <test-method status="PASS" signature="signUpViaFacebook()[pri:0, instance:testNG_1.SignUpTest@224edc67]" name="signUpViaFacebook" duration-ms="1" started-at="2017-03-24T22:19:32Z" finished-at="2017-03-24T22:19:32Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- test1 -->
-        <test-method status="PASS" signature="afterMethod()[pri:0, instance:testNG_1.TestNGAnnotation_1@29774679]" name="afterMethod" is-config="true" duration-ms="0" started-at="2017-03-24T21:42:33Z" finished-at="2017-03-24T21:42:33Z">
+        </test-method> <!-- signUpViaFacebook -->
+        <test-method status="PASS" signature="signUpViaTwitter()[pri:0, instance:testNG_1.SignUpTest@224edc67]" name="signUpViaTwitter" duration-ms="3" started-at="2017-03-24T22:19:32Z" finished-at="2017-03-24T22:19:32Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- afterMethod -->
-        <test-method status="PASS" signature="test2()[pri:0, instance:testNG_1.TestNGAnnotation_1@29774679]" name="test2" duration-ms="2" started-at="2017-03-24T21:42:33Z" finished-at="2017-03-24T21:42:33Z">
+        </test-method> <!-- signUpViaTwitter -->
+      </class> <!-- testNG_1.SignUpTest -->
+    </test> <!-- Login test -->
+  </suite> <!-- Login suite -->
+  <suite name="Payment suite" duration-ms="11" started-at="2017-03-24T20:19:32Z" finished-at="2017-03-24T20:19:32Z">
+    <groups>
+    </groups>
+    <test name="Payment test" duration-ms="11" started-at="2017-03-24T20:19:32Z" finished-at="2017-03-24T20:19:32Z">
+      <class name="testNG_1.PaymentTest">
+        <test-method status="PASS" signature="paymentInDollar()[pri:0, instance:testNG_1.PaymentTest@6093dd95]" name="paymentInDollar" duration-ms="1" started-at="2017-03-24T22:19:32Z" finished-at="2017-03-24T22:19:32Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- test2 -->
-        <test-method status="PASS" signature="beforemethod()[pri:0, instance:testNG_1.TestNGAnnotation_1@29774679]" name="beforemethod" is-config="true" duration-ms="0" started-at="2017-03-24T21:42:33Z" finished-at="2017-03-24T21:42:33Z">
+        </test-method> <!-- paymentInDollar -->
+        <test-method status="PASS" signature="paymentInRupee()[pri:0, instance:testNG_1.PaymentTest@6093dd95]" name="paymentInRupee" duration-ms="2" started-at="2017-03-24T22:19:32Z" finished-at="2017-03-24T22:19:32Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- beforemethod -->
-        <test-method status="PASS" signature="afterMethod()[pri:0, instance:testNG_1.TestNGAnnotation_1@29774679]" name="afterMethod" is-config="true" duration-ms="0" started-at="2017-03-24T21:42:33Z" finished-at="2017-03-24T21:42:33Z">
+        </test-method> <!-- paymentInRupee -->
+      </class> <!-- testNG_1.PaymentTest -->
+      <class name="testNG_1.PaymentReturn">
+        <test-method status="PASS" signature="paymentreturn()[pri:0, instance:testNG_1.PaymentReturn@5622fdf]" name="paymentreturn" duration-ms="0" started-at="2017-03-24T22:19:32Z" finished-at="2017-03-24T22:19:32Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- afterMethod -->
-        <test-method status="PASS" signature="test3()[pri:0, instance:testNG_1.TestNGAnnotation_1@29774679]" name="test3" duration-ms="0" started-at="2017-03-24T21:42:33Z" finished-at="2017-03-24T21:42:33Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- test3 -->
-        <test-method status="PASS" signature="beforemethod()[pri:0, instance:testNG_1.TestNGAnnotation_1@29774679]" name="beforemethod" is-config="true" duration-ms="0" started-at="2017-03-24T21:42:33Z" finished-at="2017-03-24T21:42:33Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforemethod -->
-        <test-method status="PASS" signature="afterClass()[pri:0, instance:testNG_1.TestNGAnnotation_1@29774679]" name="afterClass" is-config="true" duration-ms="0" started-at="2017-03-24T21:42:33Z" finished-at="2017-03-24T21:42:33Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterClass -->
-        <test-method status="PASS" signature="afterMethod()[pri:0, instance:testNG_1.TestNGAnnotation_1@29774679]" name="afterMethod" is-config="true" duration-ms="0" started-at="2017-03-24T21:42:33Z" finished-at="2017-03-24T21:42:33Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-        <test-method status="PASS" signature="afterTest()[pri:0, instance:testNG_1.TestNGAnnotation_1@29774679]" name="afterTest" is-config="true" duration-ms="0" started-at="2017-03-24T21:42:33Z" finished-at="2017-03-24T21:42:33Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterTest -->
-        <test-method status="PASS" signature="afterSuit()[pri:0, instance:testNG_1.TestNGAnnotation_1@29774679]" name="afterSuit" is-config="true" duration-ms="0" started-at="2017-03-24T21:42:33Z" finished-at="2017-03-24T21:42:33Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterSuit -->
-      </class> <!-- testNG_1.TestNGAnnotation_1 -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+        </test-method> <!-- paymentreturn -->
+      </class> <!-- testNG_1.PaymentReturn -->
+    </test> <!-- Payment test -->
+  </suite> <!-- Payment suite -->
+  <suite name="Functional suite" duration-ms="0" started-at="2017-03-24T20:19:33Z" finished-at="2017-03-24T20:19:33Z">
+    <groups>
+    </groups>
+  </suite> <!-- Functional suite -->
 </testng-results>

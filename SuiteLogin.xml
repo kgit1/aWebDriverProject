@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Login suite">
+  <test verbose="5" name="Login test">
+    <classes>
+      <class name="testNG_1.LoginTest"/>
+      <class name="testNG_1.SignUpTest"/>
+    </classes>
+  </test> <!-- Default test -->
+</suite> <!-- Default suite -->

@@ -36,58 +36,58 @@ public class TestNGAnnotation_1 {
 
 	// @Test - mark a class or a method as part of the test.
 
-	@BeforeSuite
-	public void beforeSuit() {
-		System.out.println("Starting test suite execution");
-	}
-
-	@AfterSuite
-	public void afterSuit() {
-		System.out.println("Ending test suite execution");
-	}
-
-	@BeforeTest
-	public void beforeTest() {
-		System.out.println("Start Tests Execution");
-	}
-
-	@AfterTest
-	public void afterTest() {
-		System.out.println("Stop Tests Execution");
-	}
-
-	@BeforeClass
-	public void beforeClass() {
-		System.out.println("Initialise selenium driver");
-	}
-
-	@AfterClass
-	public void afterClass() {
-		System.out.println("Destroy selenium driver");
-	}
-
-	@BeforeMethod
-	public void beforemethod() {
-		System.out.println("Opening browser");
-	}
-
-	@AfterMethod
-	public void afterMethod() {
-		System.out.println("Closing browser");
-	}
-
-	@Test
-	public void test1() {
-		System.out.println("Inside Test 1");
-	}
-
-	@Test
-	public void test2() {
-		System.out.println("Inside Test 2");
-	}
-
-	@Test
-	public void test3() {
-
-	}
+	// @BeforeSuite
+	// public void beforeSuit() {
+	// System.out.println("Starting test suite execution");
+	// }
+	//
+	// @AfterSuite
+	// public void afterSuit() {
+	// System.out.println("Ending test suite execution");
+	// }
+	//
+	// @BeforeTest
+	// public void beforeTest() {
+	// System.out.println("Start Tests Execution");
+	// }
+	//
+	// @AfterTest
+	// public void afterTest() {
+	// System.out.println("Stop Tests Execution");
+	// }
+	//
+	// @BeforeClass
+	// public void beforeClass() {
+	// System.out.println("Initialise selenium driver");
+	// }
+	//
+	// @AfterClass
+	// public void afterClass() {
+	// System.out.println("Destroy selenium driver");
+	// }
+	//
+	// @BeforeMethod
+	// public void beforemethod() {
+	// System.out.println("Opening browser");
+	// }
+	//
+	// @AfterMethod
+	// public void afterMethod() {
+	// System.out.println("Closing browser");
+	// }
+	//
+	// @Test
+	// public void test1() {
+	// System.out.println("Inside Test 1");
+	// }
+	//
+	// @Test
+	// public void test2() {
+	// System.out.println("Inside Test 2");
+	// }
+	//
+	// @Test
+	// public void test3() {
+	//
+	// }
 }

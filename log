@@ -145,7 +145,36 @@
 	create new class
 	create new test by using annotation @Test and add TestNG libs to project
 		
-	// @Test - mark a class or a method as part of the test.
+	@Test - mark a class or a method as part of the test.
+	when test runs - xml file automatically created at temp
+	D:\Users\erik\AppData\Local\Temp\testng-eclipse--1242689959
+	to create own test suite - create xml file on the root and configure
+	which tests in which order to be run and what amount of 
+	information to be in the output
+	(verbose parameter responsible for amount of info in the output, 
+	the bigger number - more info)
+	
+		<?xml version="1.0" encoding="UTF-8"?>
+		<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+		<suite name="Login suite">
+		  <test verbose="5" name="Login test">
+		    <classes>
+		      <class name="testNG_1.LoginTest"/>
+		      <class name="testNG_1.SignUpTest"/>
+		    </classes>
+		  </test>
+		</suite> 
+	
+	to create order of multiple test suites - create xml file with order
+	
+		<?xml version="1.0" encoding="UTF-8"?>
+		<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+		<suite name="Functional suite">
+			<suite-files>
+				<suite-file path="./SuiteLogin.xml"></suite-file>
+				<suite-file path="./SuitePaymentFuntionality.xml"></suite-file>
+			</suite-files>
+		</suite> <!-- Default suite -->
 	
 	// testNG configuration annotations
 	// @BeforeSuite: The annotated method will be run before all tests in this
