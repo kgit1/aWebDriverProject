@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="21" started-at="2017-03-24T18:40:42Z" finished-at="2017-03-24T18:40:42Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="21" started-at="2017-03-24T18:40:42Z" finished-at="2017-03-24T18:40:42Z">
+      <class name="testNG_1.TestNGAnnotation_1">
+        <test-method status="PASS" signature="test1()[pri:0, instance:testNG_1.TestNGAnnotation_1@3bfdc050]" name="test1" duration-ms="6" started-at="2017-03-24T20:40:42Z" finished-at="2017-03-24T20:40:42Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test1 -->
+      </class> <!-- testNG_1.TestNGAnnotation_1 -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

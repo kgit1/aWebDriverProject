@@ -134,10 +134,16 @@
 				// application is running. The current runtime can be obtained from the
 				// getRuntime() method.
 				// exec() - Executes the specified string command in a separate process.
-			}
-		
+			}		
 		}
 		
+////// TestNG /////////////
+
+	in eclipse click help-> eclipse market place-> find-> testng
+	 -> testng for eclipse-> install
+	 
+	create new class
+	create new test by using annotation @Test and add TestNG libs to project	
 	
 	
 	
