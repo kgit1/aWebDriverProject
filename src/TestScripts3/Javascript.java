@@ -38,8 +38,12 @@ public class Javascript {
 
 		// driver.findElement(By.xpath("//*[@id='contentcolumn']/div[1]/table/tbody/tr/td[2]/form/input")).click();
 
-		// call javascript function directly through driver object by function
-		// name
+		// if we can't use javascript function on the page with usual selenium
+		// tools like findElement() and click() etc, we can call this function
+		// directly
+
+		// 1th method - call javascript function directly through driver object
+		// by function name
 		// (JavascriptExecutor) - Indicates that a driver can execute
 		// JavaScript, providing access to the mechanism to do so.
 		// executeScript() - Executes JavaScript in the context of the currently
@@ -49,8 +53,8 @@ public class Javascript {
 
 		// ((JavascriptExecutor) driver).executeScript("inform()");
 
-		// call javascript function by using another javascript function which
-		// be executed by executor
+		// 2nd method - call javascript function by using another javascript
+		// function which be executed by executor
 		// document.getElementsByName('fd0')[0].click()
 		// getElementsByName('fd0')[0] - will return list of all elements with
 		// this name from the page(document)
