@@ -34,6 +34,11 @@ public class AdvanceXPath {
 		// in our case starts-with(@id,'gb_7') - element id with name gb_7
 		// driver.findElement(By.xpath("//a[starts-with(@id,'gb_7')]")).click();
 
+		//start of an id 
+		//By.CssSelector("id^=default-create-firstname")
+		// ends-with CSS selector:
+		//By.cssSelector("[id$=default-create-firstname]")
+		
 		// find element with tag "a" wich contains id with name which has or
 		// equals to "b_7"
 		// driver.findElement(By.xpath("//a[contains(@id,'b_7')]")).click();
