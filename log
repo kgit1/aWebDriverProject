@@ -205,4 +205,22 @@
 			System.out.println("SignUp via Facebook");
 			throw new SkipException("Facebook functionality is not supported");
 		}
+		
+	to create priority order of tests execution inside one class add (priority=value)
+	to annotation @Test like 
+		@Test(priority=1) 
+	lower priorities will be scheduled first
+	
+	if we need some tests execution to be depended from successful execution of 
+	some previous tests - we use depenendsOnMethods, like 
+		@Test(dependsOnMethods = { "login" }) 
+	or 
+		@Test(priority = 2, dependsOnMethods = { "login" }) 
+	dependsOnMethods - The list of methods this method depends on. There is
+	no guarantee on the order on which the methods depended upon will be run,
+	but you are guaranteed that all these methods will be run before the test
+	method that contains this annotation is run. Furthermore, if any of these
+	methods was not a SUCCESS, this test method will not be run and will be
+	flagged as a SKIP. If some of these methods have been overloaded, all the
+	overloaded versions will be run.
 	

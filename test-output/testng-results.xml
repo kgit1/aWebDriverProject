@@ -1,25 +1,120 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="3" passed="3">
+<testng-results skipped="2" failed="1" ignored="0" total="3" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="23" started-at="2017-03-25T01:08:51Z" finished-at="2017-03-25T01:08:51Z">
+  <suite name="Default suite" duration-ms="29" started-at="2017-03-25T02:37:53Z" finished-at="2017-03-25T02:37:53Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="23" started-at="2017-03-25T01:08:51Z" finished-at="2017-03-25T01:08:51Z">
-      <class name="testNG_1.LoginTest">
-        <test-method status="PASS" signature="testLoginViaEmail()[pri:0, instance:testNG_1.LoginTest@18be83e4]" name="testLoginViaEmail" duration-ms="7" started-at="2017-03-25T03:08:51Z" finished-at="2017-03-25T03:08:51Z">
+    <test name="Default test" duration-ms="29" started-at="2017-03-25T02:37:53Z" finished-at="2017-03-25T02:37:53Z">
+      <class name="testNG_1.TestsPriority">
+        <test-method status="FAIL" signature="login()[pri:1, instance:testNG_1.TestsPriority@18be83e4]" name="login" duration-ms="7" started-at="2017-03-25T04:37:53Z" finished-at="2017-03-25T04:37:53Z">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [String2] but found [String1]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [String2] but found [String1]
+	at org.testng.Assert.fail(Assert.java:93)
+	at org.testng.Assert.failNotEquals(Assert.java:512)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:134)
+	at org.testng.Assert.assertEquals(Assert.java:115)
+	at org.testng.Assert.assertEquals(Assert.java:189)
+	at org.testng.Assert.assertEquals(Assert.java:199)
+	at testNG_1.TestsPriority.login(TestsPriority.java:12)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:661)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:869)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1193)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:744)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:380)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:375)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1226)
+	at org.testng.TestNG.runSuites(TestNG.java:1144)
+	at org.testng.TestNG.run(TestNG.java:1115)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:230)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:76)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testLoginViaEmail -->
-        <test-method status="PASS" signature="testLoginViaFacebook()[pri:0, instance:testNG_1.LoginTest@18be83e4]" name="testLoginViaFacebook" duration-ms="1" started-at="2017-03-25T03:08:51Z" finished-at="2017-03-25T03:08:51Z">
+        </test-method> <!-- login -->
+        <test-method status="SKIP" signature="navigating()[pri:2, instance:testNG_1.TestsPriority@18be83e4]" name="navigating" duration-ms="0" started-at="2017-03-25T04:37:53Z" depends-on-methods="testNG_1.TestsPriority.login" finished-at="2017-03-25T04:37:53Z">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method TestsPriority.navigating()[pri:2, instance:testNG_1.TestsPriority@18be83e4] depends on not successfully finished methods]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method TestsPriority.navigating()[pri:2, instance:testNG_1.TestsPriority@18be83e4] depends on not successfully finished methods
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1084)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:744)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:380)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:375)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1226)
+	at org.testng.TestNG.runSuites(TestNG.java:1144)
+	at org.testng.TestNG.run(TestNG.java:1115)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:230)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:76)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testLoginViaFacebook -->
-        <test-method status="PASS" signature="testLoginViaTwitter()[pri:0, instance:testNG_1.LoginTest@18be83e4]" name="testLoginViaTwitter" duration-ms="1" started-at="2017-03-25T03:08:51Z" finished-at="2017-03-25T03:08:51Z">
+        </test-method> <!-- navigating -->
+        <test-method status="SKIP" signature="logOut()[pri:3, instance:testNG_1.TestsPriority@18be83e4]" name="logOut" duration-ms="0" started-at="2017-03-25T04:37:53Z" depends-on-methods="testNG_1.TestsPriority.login" finished-at="2017-03-25T04:37:53Z">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method TestsPriority.logOut()[pri:3, instance:testNG_1.TestsPriority@18be83e4] depends on not successfully finished methods]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method TestsPriority.logOut()[pri:3, instance:testNG_1.TestsPriority@18be83e4] depends on not successfully finished methods
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1084)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:744)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:380)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:375)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1226)
+	at org.testng.TestNG.runSuites(TestNG.java:1144)
+	at org.testng.TestNG.run(TestNG.java:1115)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:230)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:76)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testLoginViaTwitter -->
-      </class> <!-- testNG_1.LoginTest -->
+        </test-method> <!-- logOut -->
+      </class> <!-- testNG_1.TestsPriority -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

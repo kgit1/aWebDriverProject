@@ -3,11 +3,6 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Login suite]">
   <test name="Login test(failed)">
     <classes>
-      <class name="testNG_1.LoginTest">
-        <methods>
-          <include name="testLoginViaEmail"/>
-        </methods>
-      </class> <!-- testNG_1.LoginTest -->
       <class name="testNG_1.SignUpTest">
         <methods>
           <include name="signUpViaFacebook"/>
