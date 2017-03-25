@@ -333,13 +333,43 @@
 			<listener class-name="testNG_3.Listener" />
 		</listeners>
 
+=======Maven
 
+	Help-> Eclipse Market-> Find-> maven-> Maven Integration for Eclipse
 
-
-
-
-
-
+	New Maven Project
+	File-> New-> Other -> Maven-> Maven Project-> Next-> 
+	Next-> maven-archetype-quickstart-> Next-> 
+		Group Id - default package name
+		Artifact Id - project name
+		Version - 1-SNAPSHOT
+	Finish
+	add dependencies into dependencies section in pom.xml
+	
+	for selenium
+	open pom.xml, open google, write maven selenium, copy maven selenium dependency
+ 		<dependency>
+	        <groupId>org.seleniumhq.selenium</groupId>
+	        <artifactId>selenium-java</artifactId>
+	        <version>3.3.1</version>
+    	</dependency> 
+    
+    for TestNG
+	open pom.xml, open google, write maven testNG, copy maven testNG dependency
+ 		<dependency>
+			<groupId>org.testng</groupId>
+			<artifactId>testng</artifactId>
+			<version>6.11</version>
+		</dependency>
+ 	save, right click on project-> Maven-> Update Project
+ 	
+ 	right click on project-> Properties-> Java Build Path
+ 	if M2_REPO doesn't exist in Libraries-> Add Variable and
+ 	add M2_REPO variable
+ 	
+ 	right click on project-> Maven-> Maven Test
+ 	
+	
 
 	
 	
