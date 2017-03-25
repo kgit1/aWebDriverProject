@@ -1,64 +1,100 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="9" passed="9">
+<testng-results skipped="1" failed="0" ignored="0" total="9" passed="8">
   <reporter-output>
   </reporter-output>
-  <suite name="Login suite" duration-ms="40" started-at="2017-03-24T20:19:32Z" finished-at="2017-03-24T20:19:32Z">
+  <suite name="Login suite" duration-ms="29" started-at="2017-03-25T00:55:06Z" finished-at="2017-03-25T00:55:06Z">
     <groups>
     </groups>
-    <test name="Login test" duration-ms="40" started-at="2017-03-24T20:19:32Z" finished-at="2017-03-24T20:19:32Z">
+    <test name="Login test" duration-ms="29" started-at="2017-03-25T00:55:06Z" finished-at="2017-03-25T00:55:06Z">
       <class name="testNG_1.LoginTest">
-        <test-method status="PASS" signature="testLoginViaEmail()[pri:0, instance:testNG_1.LoginTest@1d057a39]" name="testLoginViaEmail" duration-ms="6" started-at="2017-03-24T22:19:32Z" finished-at="2017-03-24T22:19:32Z">
+        <test-method status="PASS" signature="testLoginViaEmail()[pri:0, instance:testNG_1.LoginTest@4c70fda8]" name="testLoginViaEmail" duration-ms="7" started-at="2017-03-25T02:55:06Z" finished-at="2017-03-25T02:55:06Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testLoginViaEmail -->
-        <test-method status="PASS" signature="testLoginViaFacebook()[pri:0, instance:testNG_1.LoginTest@1d057a39]" name="testLoginViaFacebook" duration-ms="1" started-at="2017-03-24T22:19:32Z" finished-at="2017-03-24T22:19:32Z">
+        <test-method status="PASS" signature="testLoginViaFacebook()[pri:0, instance:testNG_1.LoginTest@4c70fda8]" name="testLoginViaFacebook" duration-ms="1" started-at="2017-03-25T02:55:06Z" finished-at="2017-03-25T02:55:06Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testLoginViaFacebook -->
-        <test-method status="PASS" signature="testLoginViaTwitter()[pri:0, instance:testNG_1.LoginTest@1d057a39]" name="testLoginViaTwitter" duration-ms="1" started-at="2017-03-24T22:19:32Z" finished-at="2017-03-24T22:19:32Z">
+        <test-method status="PASS" signature="testLoginViaTwitter()[pri:0, instance:testNG_1.LoginTest@4c70fda8]" name="testLoginViaTwitter" duration-ms="2" started-at="2017-03-25T02:55:06Z" finished-at="2017-03-25T02:55:06Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testLoginViaTwitter -->
       </class> <!-- testNG_1.LoginTest -->
       <class name="testNG_1.SignUpTest">
-        <test-method status="PASS" signature="signUpViaEmail()[pri:0, instance:testNG_1.SignUpTest@224edc67]" name="signUpViaEmail" duration-ms="3" started-at="2017-03-24T22:19:32Z" finished-at="2017-03-24T22:19:32Z">
+        <test-method status="PASS" signature="signUpViaEmail()[pri:0, instance:testNG_1.SignUpTest@46d56d67]" name="signUpViaEmail" duration-ms="1" started-at="2017-03-25T02:55:06Z" finished-at="2017-03-25T02:55:06Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- signUpViaEmail -->
-        <test-method status="PASS" signature="signUpViaFacebook()[pri:0, instance:testNG_1.SignUpTest@224edc67]" name="signUpViaFacebook" duration-ms="1" started-at="2017-03-24T22:19:32Z" finished-at="2017-03-24T22:19:32Z">
+        <test-method status="SKIP" signature="signUpViaFacebook()[pri:0, instance:testNG_1.SignUpTest@46d56d67]" name="signUpViaFacebook" duration-ms="1" started-at="2017-03-25T02:55:06Z" finished-at="2017-03-25T02:55:06Z">
+          <exception class="org.testng.SkipException">
+            <message>
+              <![CDATA[Facebook functionality is not supported]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.testng.SkipException: Facebook functionality is not supported
+	at testNG_1.SignUpTest.signUpViaFacebook(SignUpTest.java:16)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:661)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:869)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1193)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:744)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:380)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:375)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1297)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1226)
+	at org.testng.TestNG.runSuites(TestNG.java:1144)
+	at org.testng.TestNG.run(TestNG.java:1115)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:230)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:76)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.testng.SkipException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- signUpViaFacebook -->
-        <test-method status="PASS" signature="signUpViaTwitter()[pri:0, instance:testNG_1.SignUpTest@224edc67]" name="signUpViaTwitter" duration-ms="3" started-at="2017-03-24T22:19:32Z" finished-at="2017-03-24T22:19:32Z">
+        <test-method status="PASS" signature="signUpViaTwitter()[pri:0, instance:testNG_1.SignUpTest@46d56d67]" name="signUpViaTwitter" duration-ms="1" started-at="2017-03-25T02:55:06Z" finished-at="2017-03-25T02:55:06Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- signUpViaTwitter -->
       </class> <!-- testNG_1.SignUpTest -->
     </test> <!-- Login test -->
   </suite> <!-- Login suite -->
-  <suite name="Payment suite" duration-ms="11" started-at="2017-03-24T20:19:32Z" finished-at="2017-03-24T20:19:32Z">
+  <suite name="Payment suite" duration-ms="6" started-at="2017-03-25T00:55:07Z" finished-at="2017-03-25T00:55:07Z">
     <groups>
     </groups>
-    <test name="Payment test" duration-ms="11" started-at="2017-03-24T20:19:32Z" finished-at="2017-03-24T20:19:32Z">
+    <test name="Payment test" duration-ms="6" started-at="2017-03-25T00:55:07Z" finished-at="2017-03-25T00:55:07Z">
       <class name="testNG_1.PaymentTest">
-        <test-method status="PASS" signature="paymentInDollar()[pri:0, instance:testNG_1.PaymentTest@6093dd95]" name="paymentInDollar" duration-ms="1" started-at="2017-03-24T22:19:32Z" finished-at="2017-03-24T22:19:32Z">
+        <test-method status="PASS" signature="paymentInDollar()[pri:0, instance:testNG_1.PaymentTest@4883b407]" name="paymentInDollar" duration-ms="0" started-at="2017-03-25T02:55:07Z" finished-at="2017-03-25T02:55:07Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- paymentInDollar -->
-        <test-method status="PASS" signature="paymentInRupee()[pri:0, instance:testNG_1.PaymentTest@6093dd95]" name="paymentInRupee" duration-ms="2" started-at="2017-03-24T22:19:32Z" finished-at="2017-03-24T22:19:32Z">
+        <test-method status="PASS" signature="paymentInRupee()[pri:0, instance:testNG_1.PaymentTest@4883b407]" name="paymentInRupee" duration-ms="1" started-at="2017-03-25T02:55:07Z" finished-at="2017-03-25T02:55:07Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- paymentInRupee -->
       </class> <!-- testNG_1.PaymentTest -->
       <class name="testNG_1.PaymentReturn">
-        <test-method status="PASS" signature="paymentreturn()[pri:0, instance:testNG_1.PaymentReturn@5622fdf]" name="paymentreturn" duration-ms="0" started-at="2017-03-24T22:19:32Z" finished-at="2017-03-24T22:19:32Z">
+        <test-method status="PASS" signature="paymentreturn()[pri:0, instance:testNG_1.PaymentReturn@7d9d1a19]" name="paymentreturn" duration-ms="1" started-at="2017-03-25T02:55:07Z" finished-at="2017-03-25T02:55:07Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- paymentreturn -->
       </class> <!-- testNG_1.PaymentReturn -->
     </test> <!-- Payment test -->
   </suite> <!-- Payment suite -->
-  <suite name="Functional suite" duration-ms="0" started-at="2017-03-24T20:19:33Z" finished-at="2017-03-24T20:19:33Z">
+  <suite name="Functional suite" duration-ms="0" started-at="2017-03-25T00:55:07Z" finished-at="2017-03-25T00:55:07Z">
     <groups>
     </groups>
   </suite> <!-- Functional suite -->

@@ -38,7 +38,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" class="navigator-link" panel-name="suite-Login_suite">
-              <span class="suite-name border-passed">Login suite</span>
+              <span class="suite-name border-skipped">Login suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -91,7 +91,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">6 methods,   6 passed</span>
+                    <span class="method-stats">6 methods,  1 skipped,  5 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title skipped">Skipped methods</span>
+                    <span class="show-or-hide-methods skipped">
+                      <a href="#" panel-name="suite-Login_suite" class="hide-methods skipped suite-Login_suite"> (hide)</a> <!-- hide-methods skipped suite-Login_suite -->
+                      <a href="#" panel-name="suite-Login_suite" class="show-methods skipped suite-Login_suite"> (show)</a> <!-- show-methods skipped suite-Login_suite -->
+                    </span>
+                    <div class="method-list-content skipped suite-Login_suite">
+                      <span>
+                        <img width="3%" src="skipped.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Login_suite" title="testNG_1.SignUpTest" hash-for-method="signUpViaFacebook">signUpViaFacebook</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content skipped suite-Login_suite -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -103,11 +117,6 @@
                       <span>
                         <img width="3%" src="passed.png"/>
                         <a href="#" class="method navigator-link" panel-name="suite-Login_suite" title="testNG_1.SignUpTest" hash-for-method="signUpViaEmail">signUpViaEmail</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Login_suite" title="testNG_1.SignUpTest" hash-for-method="signUpViaFacebook">signUpViaFacebook</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -231,6 +240,51 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Login_suite" class="panel Login_suite">
+          <div class="suite-Login_suite-class-skipped">
+            <div class="main-panel-header rounded-window-top">
+              <img src="skipped.png"/>
+              <span class="class-name">testNG_1.SignUpTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="signUpViaFacebook">
+                  </a> <!-- signUpViaFacebook -->
+                  <span class="method-name">signUpViaFacebook</span>
+                  <div class="stack-trace">org.testng.SkipException: Facebook functionality is not supported
+	at testNG_1.SignUpTest.signUpViaFacebook(SignUpTest.java:16)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:661)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:869)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1193)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:744)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:380)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:375)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1297)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1226)
+	at org.testng.TestNG.runSuites(TestNG.java:1144)
+	at org.testng.TestNG.run(TestNG.java:1115)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:230)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:76)
+
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Login_suite-class-skipped -->
           <div class="suite-Login_suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -275,13 +329,6 @@
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="signUpViaFacebook">
-                  </a> <!-- signUpViaFacebook -->
-                  <span class="method-name">signUpViaFacebook</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
                   <a name="signUpViaTwitter">
                   </a> <!-- signUpViaTwitter -->
                   <span class="method-name">signUpViaTwitter</span>
@@ -291,6 +338,21 @@
           </div> <!-- suite-Login_suite-class-passed -->
         </div> <!-- panel Login_suite -->
         <div panel-name="suite-Payment_suite" class="panel Payment_suite">
+          <div class="suite-Payment_suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">testNG_1.PaymentReturn</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="paymentreturn">
+                  </a> <!-- paymentreturn -->
+                  <span class="method-name">paymentreturn</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Payment_suite-class-passed -->
           <div class="suite-Payment_suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -309,21 +371,6 @@
                   <a name="paymentInRupee">
                   </a> <!-- paymentInRupee -->
                   <span class="method-name">paymentInRupee</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Payment_suite-class-passed -->
-          <div class="suite-Payment_suite-class-passed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">testNG_1.PaymentReturn</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="paymentreturn">
-                  </a> <!-- paymentreturn -->
-                  <span class="method-name">paymentreturn</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -458,32 +505,32 @@ data.addRows(6);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'testLoginViaEmail')
 data.setCell(0, 2, 'testNG_1.LoginTest')
-data.setCell(0, 3, 6);
+data.setCell(0, 3, 7);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'signUpViaTwitter')
-data.setCell(1, 2, 'testNG_1.SignUpTest')
-data.setCell(1, 3, 3);
+data.setCell(1, 1, 'testLoginViaTwitter')
+data.setCell(1, 2, 'testNG_1.LoginTest')
+data.setCell(1, 3, 2);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'signUpViaEmail')
-data.setCell(2, 2, 'testNG_1.SignUpTest')
-data.setCell(2, 3, 3);
+data.setCell(2, 1, 'testLoginViaFacebook')
+data.setCell(2, 2, 'testNG_1.LoginTest')
+data.setCell(2, 3, 1);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'signUpViaFacebook')
+data.setCell(3, 1, 'signUpViaEmail')
 data.setCell(3, 2, 'testNG_1.SignUpTest')
 data.setCell(3, 3, 1);
 data.setCell(4, 0, 4)
-data.setCell(4, 1, 'testLoginViaFacebook')
-data.setCell(4, 2, 'testNG_1.LoginTest')
+data.setCell(4, 1, 'signUpViaTwitter')
+data.setCell(4, 2, 'testNG_1.SignUpTest')
 data.setCell(4, 3, 1);
 data.setCell(5, 0, 5)
-data.setCell(5, 1, 'testLoginViaTwitter')
-data.setCell(5, 2, 'testNG_1.LoginTest')
+data.setCell(5, 1, 'signUpViaFacebook')
+data.setCell(5, 2, 'testNG_1.SignUpTest')
 data.setCell(5, 3, 1);
 window.suiteTableData['Login_suite']= { tableData: data, tableDiv: 'times-div-Login_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 15 ms</span>
+              <span class="suite-total-time">Total running time: 13 ms</span>
               <div id="times-div-Login_suite">
               </div> <!-- times-div-Login_suite -->
             </div> <!-- times-div -->
@@ -507,20 +554,20 @@ data.addRows(3);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'paymentInRupee')
 data.setCell(0, 2, 'testNG_1.PaymentTest')
-data.setCell(0, 3, 2);
+data.setCell(0, 3, 1);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'paymentInDollar')
-data.setCell(1, 2, 'testNG_1.PaymentTest')
+data.setCell(1, 1, 'paymentreturn')
+data.setCell(1, 2, 'testNG_1.PaymentReturn')
 data.setCell(1, 3, 1);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'paymentreturn')
-data.setCell(2, 2, 'testNG_1.PaymentReturn')
+data.setCell(2, 1, 'paymentInDollar')
+data.setCell(2, 2, 'testNG_1.PaymentTest')
 data.setCell(2, 3, 0);
 window.suiteTableData['Payment_suite']= { tableData: data, tableDiv: 'times-div-Payment_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 3 ms</span>
+              <span class="suite-total-time">Total running time: 2 ms</span>
               <div id="times-div-Payment_suite">
               </div> <!-- times-div-Payment_suite -->
             </div> <!-- times-div -->
@@ -605,26 +652,26 @@ return data;
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">testLoginViaFacebook</span>
-                <span class="method-start">7 ms</span>
+                <span class="method-start">8 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">testLoginViaTwitter</span>
-                <span class="method-start">9 ms</span>
+                <span class="method-start">10 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">testNG_1.SignUpTest</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">signUpViaEmail</span>
-                <span class="method-start">15 ms</span>
+                <span class="method-start">14 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">signUpViaFacebook</span>
-                <span class="method-start">21 ms</span>
+                <span class="method-start">15 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">signUpViaTwitter</span>
-                <span class="method-start">23 ms</span>
+                <span class="method-start">17 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
@@ -641,14 +688,14 @@ return data;
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">paymentInRupee</span>
-                <span class="method-start">6 ms</span>
+                <span class="method-start">1 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">testNG_1.PaymentReturn</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">paymentreturn</span>
-                <span class="method-start">9 ms</span>
+                <span class="method-start">3 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
