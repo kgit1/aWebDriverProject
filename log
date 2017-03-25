@@ -224,3 +224,15 @@
 	flagged as a SKIP. If some of these methods have been overloaded, all the
 	overloaded versions will be run.
 	
+	
+	in suite xml file we can define some preprepared value for tests, for that 
+	add to the suite xml 
+		<parameter name="email" value="appautomation@gmail.com"/>
+	and than if we add to our test class annotation
+		@Parameters("email")
+	we can use value of this parameter in methods like
+		@Test
+	public void login(String email) {
+		System.out.println("Inside login: " + email);
+	}
+	

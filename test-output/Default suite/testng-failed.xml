@@ -3,13 +3,11 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="testNG_1.TestsPriority">
+      <class name="testNG_2.LearningParameters">
         <methods>
-          <include name="navigating"/>
-          <include name="logOut"/>
           <include name="login"/>
         </methods>
-      </class> <!-- testNG_1.TestsPriority -->
+      </class> <!-- testNG_2.LearningParameters -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Login suite">
+
+<parameter name="email" value="appautomation@gmail.com"/>
+  <test verbose="2" name="Login test">
+    <classes>
+      <class name="testNG_2.XMLParameters"/>
+    </classes>
+  </test> <!-- Default test -->
+</suite> <!-- Default suite -->
