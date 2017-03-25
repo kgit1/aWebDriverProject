@@ -312,7 +312,26 @@
 	the XSLT stylesheet, to manipulate <xsl:param> parameter values, and to 
 	apply the transformation to documents
 
-
+=======Listeners
+	to  make listeners which will do some action on test execution, 
+	pass or failure etc - make listener class which extends TestListenerAdapter 
+	class, than inside override needed method like onTestSuccess, onTestFailure, 
+	onTestSkipped etc like 
+		public class Listener extends TestListenerAdapter {
+		
+			public void onTestSuccess(ITestResult tr) {
+				System.out.println("Test passed");
+			}
+		
+			public void onTestFailure(ITestResult tr){
+				System.out.println("Test failed");
+			}
+		}
+	
+	than add listeners section to xml which responsible for suite running like
+		<listeners>
+			<listener class-name="testNG_3.Listener" />
+		</listeners>
 
 
 

@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [grouping suite]">
-  <test name="Grouping test(failed)">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Login suite]">
+  <listeners>
+    <listener class-name="testNG_3.Listener"/>
+  </listeners>
+  <test name="Login test(failed)">
     <classes>
-      <class name="testNG_2.ReportingTests">
+      <class name="testNG_3.LoginTest">
         <methods>
-          <include name="logout"/>
+          <include name="loginViaFacebook"/>
         </methods>
-      </class> <!-- testNG_2.ReportingTests -->
+      </class> <!-- testNG_3.LoginTest -->
     </classes>
-  </test> <!-- Grouping test(failed) -->
-</suite> <!-- Failed suite [grouping suite] -->
+  </test> <!-- Login test(failed) -->
+</suite> <!-- Failed suite [Login suite] -->
