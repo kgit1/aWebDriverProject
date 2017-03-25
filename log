@@ -139,15 +139,19 @@
 		
 ////// TestNG /////////////
 
+========Preprare to work
 	in eclipse click help-> eclipse market place-> find-> testng
 	 -> testng for eclipse-> install
 	 
 	create new class
 	create new test by using annotation @Test and add TestNG libs to project
-		
+
+========@Test	
 	@Test - mark a class or a method as part of the test.
 	when test runs - xml file automatically created at temp
 	D:\Users\erik\AppData\Local\Temp\testng-eclipse--1242689959
+	
+========Suite
 	to create own test suite - create xml file on the root and configure
 	which tests in which order to be run and what amount of 
 	information to be in the output
@@ -164,7 +168,8 @@
 		    </classes>
 		  </test>
 		</suite> 
-	
+
+========MultiSuite
 	to create order of multiple test suites - create xml file with order
 	
 		<?xml version="1.0" encoding="UTF-8"?>
@@ -176,7 +181,7 @@
 			</suite-files>
 		</suite> <!-- Default suite -->
 	
-	testNG configuration annotations
+=======TestNG configuration annotations
 	@BeforeSuite: The annotated method will be run before all tests in this
 	suite have run.
 	@AfterSuite: The annotated method will be run after all tests in this
@@ -198,6 +203,7 @@
 	@BeforeMethod: The annotated method will be run before each test method.
 	@AfterMethod: The annotated method will be run after each test method.
 
+=======Skip test
 	if needed to skip some test - just add throw new SkipException("someText")
 	to test method
 		@Test
@@ -206,11 +212,13 @@
 			throw new SkipException("Facebook functionality is not supported");
 		}
 		
+=======Priority order	
 	to create priority order of tests execution inside one class add (priority=value)
 	to annotation @Test like 
 		@Test(priority=1) 
 	lower priorities will be scheduled first
-	
+
+=======Depends on another test	
 	if we need some tests execution to be depended from successful execution of 
 	some previous tests - we use depenendsOnMethods, like 
 		@Test(dependsOnMethods = { "login" }) 
@@ -224,7 +232,7 @@
 	flagged as a SKIP. If some of these methods have been overloaded, all the
 	overloaded versions will be run.
 	
-	
+=======Preprepared Data	Xml
 	in suite xml file we can define some preprepared value for tests, for that 
 	add to the suite xml 
 		<parameter name="email" value="appautomation@gmail.com"/>
@@ -236,7 +244,7 @@
 		System.out.println("Inside login: " + email);
 	}
 	
-	
+=======Preprepared Data	@DataProvider
 	right way to hold preprepared data for tests is
 		@DataProvider
 	Mark a method as supplying data for a test method. The data provider name 
@@ -273,5 +281,39 @@
 	
 			return obj;
 		}
+
+=======Tests grouping
+	to give the test distinction to mark the test is belong to pack of tests
+	use grouping value in @test annotation like
+		@Test(groups={"smoke","performance"}
+	and now when we call to run group of "smoke" tests - this test will be run
+		<?xml version="1.0" encoding="UTF-8"?>
+		<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+		<suite name="grouping suite">
+			<test verbose="2" name="Grouping test">
+				<groups>
+					<run>
+						<include name="performance" />
+					</run>
+				</groups>
+				<classes>
+					<class name="testNG_2.GroupingTests" />
+				</classes>
+			</test>
+		</suite> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 	
 	

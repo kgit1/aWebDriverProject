@@ -1,91 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="3" passed="3">
+<testng-results skipped="0" failed="0" ignored="1" total="3" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="28" started-at="2017-03-25T15:31:12Z" finished-at="2017-03-25T15:31:12Z">
+  <suite name="grouping suite" duration-ms="26" started-at="2017-03-25T16:11:43Z" finished-at="2017-03-25T16:11:43Z">
     <groups>
+      <group name="performance">
+        <method signature="GroupingTests.feature1()[pri:0, instance:testNG_2.GroupingTests@224edc67]" name="feature1" class="testNG_2.GroupingTests"/>
+        <method signature="GroupingTests.feature3()[pri:0, instance:testNG_2.GroupingTests@224edc67]" name="feature3" class="testNG_2.GroupingTests"/>
+      </group> <!-- performance -->
+      <group name="regression">
+        <method signature="GroupingTests.feature3()[pri:0, instance:testNG_2.GroupingTests@224edc67]" name="feature3" class="testNG_2.GroupingTests"/>
+      </group> <!-- regression -->
     </groups>
-    <test name="Default test" duration-ms="28" started-at="2017-03-25T15:31:12Z" finished-at="2017-03-25T15:31:12Z">
-      <class name="testNG_2.DataParameters">
-        <test-method status="PASS" signature="registerUser(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:testNG_2.DataParameters@4b9e13df]" name="registerUser" duration-ms="7" started-at="2017-03-25T17:31:12Z" data-provider="testData" finished-at="2017-03-25T17:31:12Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[rahul]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[singh]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[ra@gmail.com]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[123]]>
-              </value>
-            </param>
-          </params>
+    <test name="Grouping test" duration-ms="26" started-at="2017-03-25T16:11:43Z" finished-at="2017-03-25T16:11:43Z">
+      <class name="testNG_2.GroupingTests">
+        <test-method status="PASS" signature="feature1()[pri:0, instance:testNG_2.GroupingTests@224edc67]" name="feature1" duration-ms="7" started-at="2017-03-25T18:11:43Z" finished-at="2017-03-25T18:11:43Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- registerUser -->
-        <test-method status="PASS" signature="registerUser(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:testNG_2.DataParameters@4b9e13df]" name="registerUser" duration-ms="1" started-at="2017-03-25T17:31:12Z" data-provider="testData" finished-at="2017-03-25T17:31:12Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[saurav]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[singh]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[test1@gmail.com]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[12345]]>
-              </value>
-            </param>
-          </params>
+        </test-method> <!-- feature1 -->
+        <test-method status="PASS" signature="feature3()[pri:0, instance:testNG_2.GroupingTests@224edc67]" name="feature3" duration-ms="2" started-at="2017-03-25T18:11:43Z" finished-at="2017-03-25T18:11:43Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- registerUser -->
-        <test-method status="PASS" signature="registerUser(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:testNG_2.DataParameters@4b9e13df]" name="registerUser" duration-ms="1" started-at="2017-03-25T17:31:12Z" data-provider="testData" finished-at="2017-03-25T17:31:12Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[vaibhav]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[singh]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[test@gmail.com]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[pass123]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- registerUser -->
-      </class> <!-- testNG_2.DataParameters -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+        </test-method> <!-- feature3 -->
+      </class> <!-- testNG_2.GroupingTests -->
+    </test> <!-- Grouping test -->
+  </suite> <!-- grouping suite -->
 </testng-results>
