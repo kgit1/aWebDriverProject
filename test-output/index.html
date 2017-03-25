@@ -24,7 +24,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -38,7 +38,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" class="navigator-link" panel-name="suite-grouping_suite">
-              <span class="suite-name border-passed">grouping suite</span>
+              <span class="suite-name border-failed">grouping suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -49,7 +49,7 @@
               <ul>
                 <li>
                   <a href="#" class="navigator-link " panel-name="test-xml-grouping_suite">
-                    <span>D:\J\workspace\aWebDriverProject\Grouping.xml</span>
+                    <span>D:\J\workspace\aWebDriverProject\Reporting.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -59,7 +59,7 @@
                 </li>
                 <li>
                   <a href="#" class="navigator-link " panel-name="group-grouping_suite">
-                    <span>2 groups</span>
+                    <span>0 groups</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -91,7 +91,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">2 methods,   2 passed</span>
+                    <span class="method-stats">2 methods, 1 failed,   1 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-grouping_suite" class="hide-methods failed suite-grouping_suite"> (hide)</a> <!-- hide-methods failed suite-grouping_suite -->
+                      <a href="#" panel-name="suite-grouping_suite" class="show-methods failed suite-grouping_suite"> (show)</a> <!-- show-methods failed suite-grouping_suite -->
+                    </span>
+                    <div class="method-list-content failed suite-grouping_suite">
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-grouping_suite" title="testNG_2.ReportingTests" hash-for-method="logout">logout</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-grouping_suite -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -102,12 +116,7 @@
                     <div class="method-list-content passed suite-grouping_suite">
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-grouping_suite" title="testNG_2.GroupingTests" hash-for-method="feature1">feature1</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-grouping_suite" title="testNG_2.GroupingTests" hash-for-method="feature3">feature3</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-grouping_suite" title="testNG_2.ReportingTests" hash-for-method="login">login</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-grouping_suite -->
@@ -122,24 +131,67 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-grouping_suite" class="panel grouping_suite">
-          <div class="suite-grouping_suite-class-passed">
+          <div class="suite-grouping_suite-class-failed">
             <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">testNG_2.GroupingTests</span>
+              <img src="failed.png"/>
+              <span class="class-name">testNG_2.ReportingTests</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="feature1">
-                  </a> <!-- feature1 -->
-                  <span class="method-name">feature1</span>
+                  <a name="logout">
+                  </a> <!-- logout -->
+                  <span class="method-name">logout</span>
+                  <div class="stack-trace">java.lang.AssertionError: expected [String2] but found [String1]
+	at org.testng.Assert.fail(Assert.java:93)
+	at org.testng.Assert.failNotEquals(Assert.java:512)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:134)
+	at org.testng.Assert.assertEquals(Assert.java:115)
+	at org.testng.Assert.assertEquals(Assert.java:189)
+	at org.testng.Assert.assertEquals(Assert.java:199)
+	at testNG_2.ReportingTests.logout(ReportingTests.java:15)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:661)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:869)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1193)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:744)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:380)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:375)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1226)
+	at org.testng.TestNG.runSuites(TestNG.java:1144)
+	at org.testng.TestNG.run(TestNG.java:1115)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:230)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:76)
+
+</div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-grouping_suite-class-failed -->
+          <div class="suite-grouping_suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">testNG_2.ReportingTests</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="feature3">
-                  </a> <!-- feature3 -->
-                  <span class="method-name">feature3</span>
+                  <a name="login">
+                  </a> <!-- login -->
+                  <span class="method-name">login</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -147,7 +199,7 @@
         </div> <!-- panel grouping_suite -->
         <div panel-name="test-xml-grouping_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">D:\J\workspace\aWebDriverProject\Grouping.xml</span>
+            <span class="header-content">D:\J\workspace\aWebDriverProject\Reporting.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -155,13 +207,8 @@
 &lt;!DOCTYPE suite SYSTEM &quot;http://testng.org/testng-1.0.dtd&quot;&gt;
 &lt;suite guice-stage=&quot;DEVELOPMENT&quot; name=&quot;grouping suite&quot;&gt;
   &lt;test verbose=&quot;2&quot; name=&quot;Grouping test&quot;&gt;
-    &lt;groups&gt;
-      &lt;run&gt;
-        &lt;include name=&quot;performance&quot;/&gt;
-      &lt;/run&gt;
-    &lt;/groups&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;testNG_2.GroupingTests&quot;/&gt;
+      &lt;class name=&quot;testNG_2.ReportingTests&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Grouping test --&gt;
 &lt;/suite&gt; &lt;!-- grouping suite --&gt;
@@ -185,26 +232,6 @@
             <span class="header-content">Groups for grouping suite</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
-            <div class="test-group">
-              <span class="test-group-name">performance</span>
-              <br/>
-              <div class="method-in-group">
-                <span class="method-in-group-name">feature1</span>
-                <br/>
-              </div> <!-- method-in-group -->
-              <div class="method-in-group">
-                <span class="method-in-group-name">feature3</span>
-                <br/>
-              </div> <!-- method-in-group -->
-            </div> <!-- test-group -->
-            <div class="test-group">
-              <span class="test-group-name">regression</span>
-              <br/>
-              <div class="method-in-group">
-                <span class="method-in-group-name">feature3</span>
-                <br/>
-              </div> <!-- method-in-group -->
-            </div> <!-- test-group -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="times-grouping_suite" class="panel">
@@ -223,18 +250,18 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(2);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'feature1')
-data.setCell(0, 2, 'testNG_2.GroupingTests')
-data.setCell(0, 3, 7);
+data.setCell(0, 1, 'login')
+data.setCell(0, 2, 'testNG_2.ReportingTests')
+data.setCell(0, 3, 5);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'feature3')
-data.setCell(1, 2, 'testNG_2.GroupingTests')
+data.setCell(1, 1, 'logout')
+data.setCell(1, 2, 'testNG_2.ReportingTests')
 data.setCell(1, 3, 2);
 window.suiteTableData['grouping_suite']= { tableData: data, tableDiv: 'times-div-grouping_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 9 ms</span>
+              <span class="suite-total-time">Total running time: 7 ms</span>
               <div id="times-div-grouping_suite">
               </div> <!-- times-div-grouping_suite -->
             </div> <!-- times-div -->
@@ -249,16 +276,9 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-grouping_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">1 ignored method</span>
+            <span class="header-content">0 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
-            <div class="ignored-class-div">
-              <span class="ignored-class-name">testNG_2.GroupingTests</span>
-              <div class="ignored-methods-div">
-                <span class="ignored-method-name">feature2</span>
-                <br/>
-              </div> <!-- ignored-methods-div -->
-            </div> <!-- ignored-class-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="chronological-grouping_suite" class="panel">
@@ -267,14 +287,16 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">testNG_2.GroupingTests</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">testNG_2.ReportingTests</div> <!-- chronological-class-name -->
               <div class="test-method">
-                <span class="method-name">feature1</span>
+                <span class="method-name">login</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <span class="method-name">feature3</span>
-                <span class="method-start">8 ms</span>
+                <img src="failed.png">
+                </img>
+                <span class="method-name">logout</span>
+                <span class="method-start">6 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

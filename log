@@ -282,7 +282,7 @@
 			return obj;
 		}
 
-=======Tests grouping
+=======Grouping tests
 	to give the test distinction to mark the test is belong to pack of tests
 	use grouping value in @test annotation like
 		@Test(groups={"smoke","performance"}
@@ -305,8 +305,12 @@
 			</test>
 		</suite> 
 
-
-
+=======Fancy reports
+	add XSLT processor libs - Saxon-HE-9.7.0-15 jar and SaxonLiaison jar
+	An XSLTProcessor applies an XSLT stylesheet transformation to an XML 
+	document to produce a new XML document as output. It has methods to load 
+	the XSLT stylesheet, to manipulate <xsl:param> parameter values, and to 
+	apply the transformation to documents
 
 
 
