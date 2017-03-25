@@ -1,24 +1,91 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" ignored="0" total="3" passed="3">
   <reporter-output>
   </reporter-output>
-  <suite name="Login suite" duration-ms="21" started-at="2017-03-25T02:53:22Z" finished-at="2017-03-25T02:53:22Z">
+  <suite name="Default suite" duration-ms="28" started-at="2017-03-25T15:31:12Z" finished-at="2017-03-25T15:31:12Z">
     <groups>
     </groups>
-    <test name="Login test" duration-ms="21" started-at="2017-03-25T02:53:22Z" finished-at="2017-03-25T02:53:22Z">
-      <class name="testNG_2.LearningParameters">
-        <test-method status="PASS" signature="login(java.lang.String)[pri:0, instance:testNG_2.LearningParameters@475530b9]" name="login" duration-ms="7" started-at="2017-03-25T04:53:22Z" finished-at="2017-03-25T04:53:22Z">
+    <test name="Default test" duration-ms="28" started-at="2017-03-25T15:31:12Z" finished-at="2017-03-25T15:31:12Z">
+      <class name="testNG_2.DataParameters">
+        <test-method status="PASS" signature="registerUser(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:testNG_2.DataParameters@4b9e13df]" name="registerUser" duration-ms="7" started-at="2017-03-25T17:31:12Z" data-provider="testData" finished-at="2017-03-25T17:31:12Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[appautomation@gmail.com]]>
+                <![CDATA[rahul]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[singh]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[ra@gmail.com]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[123]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- login -->
-      </class> <!-- testNG_2.LearningParameters -->
-    </test> <!-- Login test -->
-  </suite> <!-- Login suite -->
+        </test-method> <!-- registerUser -->
+        <test-method status="PASS" signature="registerUser(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:testNG_2.DataParameters@4b9e13df]" name="registerUser" duration-ms="1" started-at="2017-03-25T17:31:12Z" data-provider="testData" finished-at="2017-03-25T17:31:12Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[saurav]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[singh]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[test1@gmail.com]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[12345]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- registerUser -->
+        <test-method status="PASS" signature="registerUser(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:testNG_2.DataParameters@4b9e13df]" name="registerUser" duration-ms="1" started-at="2017-03-25T17:31:12Z" data-provider="testData" finished-at="2017-03-25T17:31:12Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[vaibhav]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[singh]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[test@gmail.com]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[pass123]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- registerUser -->
+      </class> <!-- testNG_2.DataParameters -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>
