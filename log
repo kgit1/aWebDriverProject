@@ -287,6 +287,9 @@
 	use grouping value in @test annotation like
 		@Test(groups={"smoke","performance"}
 	and now when we call to run group of "smoke" tests - this test will be run
+	to run group of tests in xml add groups section with section run inside, 
+	which contains condition "include" to run group of tests or 
+	condition exclude - to run all tests except certain group	
 		<?xml version="1.0" encoding="UTF-8"?>
 		<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 		<suite name="grouping suite">
