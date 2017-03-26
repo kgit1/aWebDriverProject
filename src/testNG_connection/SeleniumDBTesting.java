@@ -33,7 +33,8 @@ public class SeleniumDBTesting {
 		driver.findElement(By.xpath("//*[@id='zipCode']")).sendKeys("52431");
 		driver.findElement(By.xpath("//*[@id='firstName']")).sendKeys(name);
 		driver.findElement(By.xpath("//*[@id='lastName']")).sendKeys(fullname);
-		//*[@id="subscribeForm"]/div[3]/input[2]
+		
+		driver.findElement(By.xpath("//*[@id='subscribeForm']/div[2]/input[3]")).click();
 		driver.findElement(By.xpath("//*[@id='subscribeForm']/div[3]/input[2]")).click();
 
 		// Database connection
