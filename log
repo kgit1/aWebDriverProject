@@ -369,7 +369,9 @@
  	
  	right click on project-> Maven-> Maven Test
  	
-	
+=======Connect Database 
+	add jdbc libs -> google mysql jdbc driver jar and add 
+	com.mysql.jdbc_5.1.5 to project
 
 	
 	
