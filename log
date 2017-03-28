@@ -436,6 +436,55 @@
 					/* ignored */}
 			}
 		}
+		
+=======Jenkins
+	tool for continuous integration. In software engineering, continuous 
+	integration (CI) is the practice of merging all developer working copies 
+	to a shared mainline several times a day.	
+	Jenkins helps to automate the non-human part of the whole software 
+	development process, with now common things like continuous integration, 
+	but by further empowering teams to implement the technical part of a Continuous Delivery. It is a server-based system running in a servlet container such as Apache Tomcat. 
+
+	google= download jenkins->download weekly release
+	open command prompt - cd to folder where jenkins is
+	type java -jar jenkins.war
+	open browser and go to localhost:8080, give jenkins password created local
+	c26253e9d906487ebe33f0d9ef1d7971
+	user: kgit1
+	password: qwert111
+	let jenkins add plugins
+	in manage jenkins menu - start on windows start up can be turned on
+	
+	create new job -> type item name-> freestyle projeckt-> OK
+	triggers -> periodically 
+	0-0 20 * * 1 - means at 00 minutes 20 hours any day any month first day of the week
+	build-> windows batch(command) %time%
+	
+=======Maven project in Jenkins
+	create newItem -> choose maven project-> 
+	in post-builds-> 
+	choose - invoke top-level Maven targets
+	in invoke top-level Maven targets-> choose version of maven which we added 
+	in jenkins configuration main tools
+	in target - type test
+	in POM - type path to pom.xml of the project - D:\J\workspace\aWebDriverProjectMaven\pom.xml
+	Save
+
+
+=======Jenkins Disabling Security
+		One may accidentally set up security realm / authorization in such a way that you may no longer able to reconfigure Jenkins.
+		
+		When this happens, you can fix this by the following steps:
+		
+		Stop Jenkins (the easiest way to do this is to stopthe servlet container.)
+		Go to $JENKINS_HOME in the file system and find config.xml file.
+		Open this file in the editor.
+		Look for the <useSecurity>true</useSecurity> element in this file.
+		Replace true with false
+		Remove the elements authorizationStrategy and securityRealm
+		Start Jenkins
+		When Jenkins comes back, it will be in an unsecured mode where everyone gets full access to the system.
+		If this is still not working, trying renaming or deleting config.xml.
 
 =======Git
 	to take changes from git server -> fetch-> synchronize-> pull
