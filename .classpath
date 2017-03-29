@@ -48,5 +48,14 @@
 	<classpathentry kind="lib" path="D:/JavaProjects/selenium-java-3.3.1/XSLT processor libs/Saxon-HE-9.7.0-15.jar"/>
 	<classpathentry kind="lib" path="D:/JavaProjects/selenium-java-3.3.1/XSLT processor libs/SaxonLiaison.jar"/>
 	<classpathentry kind="lib" path="D:/JavaProjects/selenium-java-3.3.1/com.mysql.jdbc_5.1.5.jar/com.mysql.jdbc_5.1.5.jar"/>
+	<classpathentry kind="lib" path="D:/JavaProjects/selenium-java-3.3.1/Apache POI - the Java API for Microsoft Documents poi-bin-3.15-20160924/poi-3.15/poi-3.15.jar"/>
+	<classpathentry kind="lib" path="D:/JavaProjects/selenium-java-3.3.1/Apache POI - the Java API for Microsoft Documents poi-bin-3.15-20160924/poi-3.15/poi-examples-3.15.jar"/>
+	<classpathentry kind="lib" path="D:/JavaProjects/selenium-java-3.3.1/Apache POI - the Java API for Microsoft Documents poi-bin-3.15-20160924/poi-3.15/poi-excelant-3.15.jar"/>
+	<classpathentry kind="lib" path="D:/JavaProjects/selenium-java-3.3.1/Apache POI - the Java API for Microsoft Documents poi-bin-3.15-20160924/poi-3.15/poi-ooxml-3.15.jar"/>
+	<classpathentry kind="lib" path="D:/JavaProjects/selenium-java-3.3.1/Apache POI - the Java API for Microsoft Documents poi-bin-3.15-20160924/poi-3.15/poi-ooxml-schemas-3.15.jar"/>
+	<classpathentry kind="lib" path="D:/JavaProjects/selenium-java-3.3.1/Apache POI - the Java API for Microsoft Documents poi-bin-3.15-20160924/poi-3.15/poi-scratchpad-3.15.jar"/>
+	<classpathentry kind="lib" path="D:/JavaProjects/selenium-java-3.3.1/Apache POI - the Java API for Microsoft Documents poi-bin-3.15-20160924/poi-3.15/lib/log4j-1.2.17.jar"/>
+	<classpathentry kind="lib" path="D:/JavaProjects/selenium-java-3.3.1/Apache POI - the Java API for Microsoft Documents poi-bin-3.15-20160924/poi-3.15/lib/xmlbeans-5.3.0-rc1.jar"/>
+	<classpathentry kind="lib" path="D:/JavaProjects/selenium-java-3.3.1/Apache POI - the Java API for Microsoft Documents poi-bin-3.15-20160924/poi-3.15/lib/commons-collections4-4.1.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

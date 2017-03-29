@@ -486,6 +486,33 @@
 		When Jenkins comes back, it will be in an unsecured mode where everyone gets full access to the system.
 		If this is still not working, trying renaming or deleting config.xml.
 
+
+=======Excel - Own lib to read excel files
+	new package lib, new class ExcelReader
+	
+	add lib to connect to excel-> google java excel poi jar download, 
+	download from Apache POI - the Java API for Microsoft Documents
+	Download-> Last stable release-> poi-bin-3.15-20160924.zip-> extract
+	
+	add libs from poi root to project: poi-scratchpad-3.15, poi-3.15, poi-examples-3.15, 
+	poi-excelant-3.15, poi-ooxml-3.15, poi-ooxml-schemas-3.15, 
+	add libs from poi folder lib: log4j-1.2.17, commons-codec-1.10, commons-collections4-4.1, commons-logging-1.2,junit-4.12.
+	
+	add xml beans lib
+	
+	XMLBeans is a technology for accessing XML by binding it to Java types. 
+	XMLBeans provides several ways to get at the XML, including:
+	Through XML schema that has been compiled to generate Java types that 
+	represent schema types. In this way, you can access instances of the schema 
+	through JavaBeans-style accessors after the fashion of "getFoo" and "setFoo".
+	The XMLBeans API also allows you to reflect into the XML schema itself 
+	through an XML Schema Object model.
+	A cursor model through which you can traverse the full XML infoset.
+	Support for XML DOM.
+
+	add folder testData to root, add testData.xlsx to this folder
+
+
 =======Git
 	to take changes from git server -> fetch-> synchronize-> pull
 	
