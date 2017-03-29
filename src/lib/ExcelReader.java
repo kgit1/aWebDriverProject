@@ -4,6 +4,7 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 
+import org.apache.poi.xssf.usermodel.XSSFCell;
 import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
@@ -20,6 +21,9 @@ public class ExcelReader {
 
 	// object for excel file's sheet's row
 	private XSSFRow row = null;
+
+	// object for excel file's sheet's row's cell
+	private XSSFCell cell = null;
 
 	// path to file
 	private String path = null;
@@ -40,7 +44,7 @@ public class ExcelReader {
 		sheet = workbook.getSheetAt(0);
 	}
 
-	// method gets sheetNmae and returns number of rows on the sheet
+	// method gets sheetName and returns number of rows on the sheet
 	public int getSheetRows(String sheetName) {
 		// index of the sheet in the excel file, return -1 if incorrect name
 		int index = workbook.getSheetIndex(sheetName);
@@ -52,10 +56,11 @@ public class ExcelReader {
 		return sheet.getLastRowNum() + 1;
 	}
 
+	// method gets sheetName and returns number of columns on the sheet
 	public int getSheetColumns(String sheetName) {
 		// index of the sheet in the excel file, return -1 if incorrect name
 		int index = workbook.getSheetIndex(sheetName);
-		// sheet from file by index of the sheet
+		// index of the sheet in the excel file, return -1 if incorrect name
 		sheet = workbook.getSheetAt(index);
 		// get first row of the sheet
 		row = sheet.getRow(0);
@@ -65,6 +70,22 @@ public class ExcelReader {
 		return row.getLastCellNum() + 1;
 	}
 
+	// method gets sheetName, column and row number and returns value of the
+	// certain cell
+	public String getCellData(String sheetName, int columnNumber, int rowNumber) {
+		// index of the sheet in the excel file, return -1 if incorrect name
+		int index = workbook.getSheetIndex(sheetName);
+		// index of the sheet in the excel file, return -1 if incorrect name
+		sheet = workbook.getSheetAt(index);
+		// get row of the sheet
+		row = sheet.getRow(rowNumber);
+		// get cell of the row
+		cell = row.getCell(columnNumber);
+
+		// return cell's string value
+		return cell.getStringCellValue();
+	}
+
 	public static void main(String[] args) throws IOException {
 		ExcelReader reader = new ExcelReader();
 		System.out.println("LoginTest rows " + reader.getSheetRows("LoginTest"));
@@ -72,6 +93,9 @@ public class ExcelReader {
 
 		System.out.println("LoginTest columns " + reader.getSheetColumns("LoginTest"));
 		System.out.println("SignUpTest columns " + reader.getSheetColumns("LoginTest"));
+
+		System.out.println("Cell 0 1: "+reader.getCellData("LoginTest", 0, 1));
+		System.out.println("Cell 1 1: "+reader.getCellData("LoginTest", 1, 1));
 	}
 
 }
