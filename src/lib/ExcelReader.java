@@ -1,6 +1,8 @@
 package lib;
 
 import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
 import java.io.IOException;
 
 import org.apache.poi.xssf.usermodel.XSSFCell;
@@ -10,7 +12,11 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 public class ExcelReader {
 	// FileInputStream obtains input bytes from a file in a file system
-	private FileInputStream inputFile = null;
+	private FileInputStream inputStream = null;
+
+	// A file output stream is an output stream for writing data to a File or to
+	// a FileDescriptor
+	private FileOutputStream outputStream = null;
 
 	// object for excel file
 	private XSSFWorkbook workbook = null;
@@ -34,10 +40,10 @@ public class ExcelReader {
 		path = "D:\\J\\workspace\\aWebDriverProject\\testData\\testData.xlsx";
 
 		// stream from file
-		inputFile = new FileInputStream(path);
+		inputStream = new FileInputStream(path);
 
 		// workbook
-		workbook = new XSSFWorkbook(inputFile);
+		workbook = new XSSFWorkbook(inputStream);
 
 		// first sheet of workbook
 		sheet = workbook.getSheetAt(0);
@@ -85,6 +91,8 @@ public class ExcelReader {
 		return cell.getStringCellValue();
 	}
 
+	// method gets sheetName, column and row number and provides value of the
+	// certain cell
 	public String getCellData(String sheetName, String colName, int rowNumber) {
 		// index of the sheet in the excel file, return -1 if incorrect name
 		int index = workbook.getSheetIndex(sheetName);
@@ -105,19 +113,59 @@ public class ExcelReader {
 		return null;
 	}
 
+	public void setCellData(String sheetName, String newData, int columnNumber, int rowNumber) {
+		// index of the sheet in the excel file, return -1 if incorrect name
+		int index = workbook.getSheetIndex(sheetName);
+		// index of the sheet in the excel file, return -1 if incorrect name
+		sheet = workbook.getSheetAt(index);
+		// get row of the sheet
+		row = sheet.getRow(rowNumber);
+		System.out.println("workbook: " + workbook);
+		System.out.println("sheet: " + sheet);
+		System.out.println("row: " + rowNumber);
+		System.out.println("row: " + row);
+		// create cell object of the row
+		cell = row.createCell(columnNumber);
+		// set value to cell object
+		cell.setCellValue(newData);
+
+		try {
+			// Creates a file output stream to write to the file with the
+			// specified name
+			outputStream = new FileOutputStream(path);
+			// write data stream to excel file
+			workbook.write(outputStream);
+			// close stream
+			outputStream.close();
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+
 	public static void main(String[] args) throws IOException {
 		ExcelReader reader = new ExcelReader();
-		System.out.println("LoginTest rows " + reader.getSheetRows("LoginTest"));
-		System.out.println("SignInTest rows " + reader.getSheetRows("SignUpTest"));
+		// System.out.println("LoginTest rows " +
+		// reader.getSheetRows("LoginTest"));
+		// System.out.println("SignInTest rows " +
+		// reader.getSheetRows("SignUpTest"));
+		//
+		// System.out.println("LoginTest columns " +
+		// reader.getSheetColumns("LoginTest"));
+		// System.out.println("SignUpTest columns " +
+		// reader.getSheetColumns("LoginTest"));
+		//
+		// System.out.println("Cell 0 1: " + reader.getCellData("LoginTest", 0,
+		// 1));
+		// System.out.println("Cell 1 1: " + reader.getCellData("LoginTest", 1,
+		// 1));
+		//
+		// System.out.println(reader.getCellData("LoginTest", "password", 2));
+		// System.out.println(reader.getCellData("SignUpTest", "firstname", 1));
 
-		System.out.println("LoginTest columns " + reader.getSheetColumns("LoginTest"));
-		System.out.println("SignUpTest columns " + reader.getSheetColumns("LoginTest"));
-
-		System.out.println("Cell 0 1: " + reader.getCellData("LoginTest", 0, 1));
-		System.out.println("Cell 1 1: " + reader.getCellData("LoginTest", 1, 1));
-
-		System.out.println(reader.getCellData("LoginTest", "password", 2));
-		System.out.println(reader.getCellData("SignUpTest", "firstname", 1));
+		reader.setCellData("LoginTest", "newLogin1", 0, 2);
+		reader.setCellData("LoginTest", "newPassword1", 1, 2);
 
 	}
 
