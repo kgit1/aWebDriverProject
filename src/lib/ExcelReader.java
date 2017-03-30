@@ -85,6 +85,26 @@ public class ExcelReader {
 		return cell.getStringCellValue();
 	}
 
+	public String getCellData(String sheetName, String colName, int rowNumber) {
+		// index of the sheet in the excel file, return -1 if incorrect name
+		int index = workbook.getSheetIndex(sheetName);
+		// index of the sheet in the excel file, return -1 if incorrect name
+		sheet = workbook.getSheetAt(index);
+
+		for (int i = 0; i < getSheetColumns(sheetName); i++) {
+			// get row of the sheet
+			row = sheet.getRow(0);
+			// get cell of the row
+			cell = row.getCell(i);
+			if (cell.getStringCellValue().equals(colName)) {
+				row = sheet.getRow(rowNumber);
+				cell = row.getCell(i);
+				return cell.getStringCellValue();
+			}
+		}
+		return null;
+	}
+
 	public static void main(String[] args) throws IOException {
 		ExcelReader reader = new ExcelReader();
 		System.out.println("LoginTest rows " + reader.getSheetRows("LoginTest"));
@@ -93,8 +113,12 @@ public class ExcelReader {
 		System.out.println("LoginTest columns " + reader.getSheetColumns("LoginTest"));
 		System.out.println("SignUpTest columns " + reader.getSheetColumns("LoginTest"));
 
-		System.out.println("Cell 0 1: "+reader.getCellData("LoginTest", 0, 1));
-		System.out.println("Cell 1 1: "+reader.getCellData("LoginTest", 1, 1));
+		System.out.println("Cell 0 1: " + reader.getCellData("LoginTest", 0, 1));
+		System.out.println("Cell 1 1: " + reader.getCellData("LoginTest", 1, 1));
+
+		System.out.println(reader.getCellData("LoginTest", "password", 2));
+		System.out.println(reader.getCellData("SignUpTest", "firstname", 1));
+
 	}
 
 }
