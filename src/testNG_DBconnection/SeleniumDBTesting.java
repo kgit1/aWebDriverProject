@@ -1,4 +1,4 @@
-package testNG_connection;
+package testNG_DBconnection;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

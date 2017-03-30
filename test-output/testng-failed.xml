@@ -1,16 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Login suite]">
-  <listeners>
-    <listener class-name="testNG_3.Listener"/>
-  </listeners>
-  <test name="Login test(failed)">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
+  <test name="Default test(failed)">
     <classes>
-      <class name="testNG_3.LoginTest">
+      <class name="testNG_propertiesFile.LearningProperty">
         <methods>
-          <include name="loginViaFacebook"/>
+          <include name="testProperties"/>
         </methods>
-      </class> <!-- testNG_3.LoginTest -->
+      </class> <!-- testNG_propertiesFile.LearningProperty -->
     </classes>
-  </test> <!-- Login test(failed) -->
-</suite> <!-- Failed suite [Login suite] -->
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->
