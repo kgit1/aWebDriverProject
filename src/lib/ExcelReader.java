@@ -1,7 +1,6 @@
 package lib;
 
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 
 import org.apache.poi.xssf.usermodel.XSSFCell;
@@ -44,7 +43,7 @@ public class ExcelReader {
 		sheet = workbook.getSheetAt(0);
 	}
 
-	// method gets sheetName and returns number of rows on the sheet
+	// method gets sheetName and provides number of rows on the sheet
 	public int getSheetRows(String sheetName) {
 		// index of the sheet in the excel file, return -1 if incorrect name
 		int index = workbook.getSheetIndex(sheetName);
@@ -56,7 +55,7 @@ public class ExcelReader {
 		return sheet.getLastRowNum() + 1;
 	}
 
-	// method gets sheetName and returns number of columns on the sheet
+	// method gets sheetName and provides number of columns on the sheet
 	public int getSheetColumns(String sheetName) {
 		// index of the sheet in the excel file, return -1 if incorrect name
 		int index = workbook.getSheetIndex(sheetName);
@@ -70,7 +69,7 @@ public class ExcelReader {
 		return row.getLastCellNum() + 1;
 	}
 
-	// method gets sheetName, column and row number and returns value of the
+	// method gets sheetName, column and row number and provides value of the
 	// certain cell
 	public String getCellData(String sheetName, int columnNumber, int rowNumber) {
 		// index of the sheet in the excel file, return -1 if incorrect name
