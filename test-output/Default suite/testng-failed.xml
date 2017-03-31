@@ -3,11 +3,11 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="testNG_Log4j.TestingLog4j">
+      <class name="testNG_sauseLabs.BasicTestEdge">
         <methods>
-          <include name="testLogs"/>
+          <include name="loginTest"/>
         </methods>
-      </class> <!-- testNG_Log4j.TestingLog4j -->
+      </class> <!-- testNG_sauseLabs.BasicTestEdge -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

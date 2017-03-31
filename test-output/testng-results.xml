@@ -2,16 +2,16 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="4287" started-at="2017-03-31T16:59:37Z" finished-at="2017-03-31T16:59:41Z">
+  <suite name="Default suite" duration-ms="20978" started-at="2017-03-31T22:16:31Z" finished-at="2017-03-31T22:16:52Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="4287" started-at="2017-03-31T16:59:37Z" finished-at="2017-03-31T16:59:41Z">
-      <class name="testNG_Log4j.TestingLog4j">
-        <test-method status="PASS" signature="testLogs()[pri:0, instance:testNG_Log4j.TestingLog4j@42d80b78]" name="testLogs" duration-ms="4275" started-at="2017-03-31T19:59:37Z" finished-at="2017-03-31T19:59:41Z">
+    <test name="Default test" duration-ms="20978" started-at="2017-03-31T22:16:31Z" finished-at="2017-03-31T22:16:52Z">
+      <class name="testNG_sauseLabs.BasicTestChrome">
+        <test-method status="PASS" signature="loginTest()[pri:0, instance:testNG_sauseLabs.BasicTestChrome@1bce4f0a]" name="loginTest" duration-ms="20964" started-at="2017-04-01T01:16:31Z" finished-at="2017-04-01T01:16:52Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testLogs -->
-      </class> <!-- testNG_Log4j.TestingLog4j -->
+        </test-method> <!-- loginTest -->
+      </class> <!-- testNG_sauseLabs.BasicTestChrome -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
