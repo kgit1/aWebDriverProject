@@ -727,6 +727,39 @@
 		}
 		
 
+=======Log4j
+	add log4j lib
+	
+	at src - create new file - log4j.properties
+		#Application Logs 
+		# #Here debug is the Logger level and file is used as an identifier. 
+		# "devpinoyLogger" string will be passed to getLogger method of Logger class
+		log4j.logger.devpinoyLogger=DEBUG, dest1 
+		log4j.appender.dest1=org.apache.log4j.RollingFileAppender 		
+		# "maxFileSize" is used to configure the maximum size of the log file. 
+		# When file reaches this size, a new file will be created with the same name 
+		# and the old file name will be add as an Index to it.
+		log4j.appender.dest1.maxFileSize=5000KB 	
+		# "maxBackupIndex" is used to configure maximum number of files to be backup
+		log4j.appender.dest1.maxBackupIndex=3		
+		# "layout" is used to set the format of the log file
+		log4j.appender.dest1.layout=org.apache.log4j.PatternLayout		
+		log4j.appender.dest1.layout.ConversionPattern=%d{dd/MM/yyyy HH:mm:ss} %c %m%n		 
+		# "File" is used to give file name in which logs will be saved
+		log4j.appender.dest1.File=D:\\J\\Logs.log 
+		# do not append the old file. Create a new log file everytime 
+		log4j.appender.dest1.Append=false 
+		
+		add Logger object to class
+			Logger logger
+		add System property to class
+			System.setProperty("org.apache.commons.logging.Log", 
+			"org.apache.commons.logging.impl.Jdk14Logger");
+		initialize logger with properties
+			logger = Logger.getLogger("devpinoyLogger");
+		use logger to log messages(strings) to file from properties
+			logger.debug("Starting of Selenium tests");
+
 =======Git
 	to take changes from git server -> fetch-> synchronize-> pull
 	

@@ -2,16 +2,16 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="19" started-at="2017-03-30T19:52:41Z" finished-at="2017-03-30T19:52:41Z">
+  <suite name="Default suite" duration-ms="4287" started-at="2017-03-31T16:59:37Z" finished-at="2017-03-31T16:59:41Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="19" started-at="2017-03-30T19:52:41Z" finished-at="2017-03-30T19:52:41Z">
-      <class name="testNG_propertiesFile.LearningProperty">
-        <test-method status="PASS" signature="testProperties()[pri:0, instance:testNG_propertiesFile.LearningProperty@ae45eb6]" name="testProperties" duration-ms="7" started-at="2017-03-30T22:52:41Z" finished-at="2017-03-30T22:52:41Z">
+    <test name="Default test" duration-ms="4287" started-at="2017-03-31T16:59:37Z" finished-at="2017-03-31T16:59:41Z">
+      <class name="testNG_Log4j.TestingLog4j">
+        <test-method status="PASS" signature="testLogs()[pri:0, instance:testNG_Log4j.TestingLog4j@42d80b78]" name="testLogs" duration-ms="4275" started-at="2017-03-31T19:59:37Z" finished-at="2017-03-31T19:59:41Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testProperties -->
-      </class> <!-- testNG_propertiesFile.LearningProperty -->
+        </test-method> <!-- testLogs -->
+      </class> <!-- testNG_Log4j.TestingLog4j -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
