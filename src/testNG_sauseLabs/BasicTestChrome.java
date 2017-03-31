@@ -2,6 +2,7 @@ package testNG_sauseLabs;
 
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.Arrays;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
@@ -39,7 +40,11 @@ public class BasicTestChrome {
 		caps.setCapability("platform", "Windows 10");
 		caps.setCapability("version", "56.0");
 		// adds options from Chrome Options to capabilities
-		caps.setCapability(ChromeOptions.CAPABILITY, options);
+		// one of this must disable chrome extensions, but not working on
+		// saucelabs
+		// caps.setCapability(ChromeOptions.CAPABILITY, options);
+		// caps.setCapability("chrome.switches",
+		// Arrays.asList("--disable-extensions"));
 
 		WebDriver driver = new RemoteWebDriver(new URL(URL), caps);
 

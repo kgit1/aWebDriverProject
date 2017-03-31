@@ -2,12 +2,12 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="20978" started-at="2017-03-31T22:16:31Z" finished-at="2017-03-31T22:16:52Z">
+  <suite name="Default suite" duration-ms="20603" started-at="2017-03-31T22:36:09Z" finished-at="2017-03-31T22:36:30Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="20978" started-at="2017-03-31T22:16:31Z" finished-at="2017-03-31T22:16:52Z">
+    <test name="Default test" duration-ms="20603" started-at="2017-03-31T22:36:09Z" finished-at="2017-03-31T22:36:30Z">
       <class name="testNG_sauseLabs.BasicTestChrome">
-        <test-method status="PASS" signature="loginTest()[pri:0, instance:testNG_sauseLabs.BasicTestChrome@1bce4f0a]" name="loginTest" duration-ms="20964" started-at="2017-04-01T01:16:31Z" finished-at="2017-04-01T01:16:52Z">
+        <test-method status="PASS" signature="loginTest()[pri:0, instance:testNG_sauseLabs.BasicTestChrome@1bce4f0a]" name="loginTest" duration-ms="20591" started-at="2017-04-01T01:36:09Z" finished-at="2017-04-01T01:36:30Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginTest -->
