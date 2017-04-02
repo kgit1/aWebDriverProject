@@ -831,11 +831,116 @@
 			}
 		}
 
+=======TestNG parallel execution
 
+	to make tests running parallel = add attribute "parallel" with value -
+	"methods" to test suite xml	and attribute "thread-count" to define how 
+	many threads will be going parallel
+		<?xml version="1.0" encoding="UTF-8"?>
+		<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+		<suite name="SmokeTest" parallel="methods" thread-count="2">
+			<test name="Parallel Tests">
+				<classes>
+					<class name="testNG_parallelExecution.TestWebSite" />
+				</classes>
+			</test>
+		</suite>
+		
+	than if using shared WebDriver object for all tests - use ThreadLocal object
+	to obtain local copy of one driver for every test's thread
+	first create ThreadLocal object generic to WebDriver
+		public static ThreadLocal<WebDriver> dr = new ThreadLocal<>();
+		
+	that create webDriver which must be copied
+		System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "/drivers/chromedriver.exe");
+		WebDriver driver = new ChromeDriver();
 
+	than assign this web driver to threadlocal object by set() method
+		setWebDriver(driver);
+	
+	than get back copy of that driver from threadlocal by get() method and work
+	with it as usual
+		dr.get().manage().window().maximize();
+		dr.get().manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+		dr.get().close();
+	
+	so in the end we have class like this
+		import java.util.concurrent.TimeUnit;
+		import org.openqa.selenium.WebDriver;
+		import org.openqa.selenium.chrome.ChromeDriver;
+		import org.testng.annotations.AfterMethod;
+		import org.testng.annotations.BeforeMethod;
+		
+		public class SeleniumInitialization {
+			// This class provides thread-local variables. These variables differ from
+			// their normal counterparts in that each thread that accesses one (via its
+			// get or set method) has its own, independently initialized copy of the
+			// variable. ThreadLocal instances are typically private static fields in
+			// classes that wish to associate state with a thread (e.g., a user ID or
+			// Transaction ID).
+			// with threadlocal we get local copy of webDriver for every thread
+			// to do this use set() method of ThreadLocal which returns threadlocal copy
+			// of given variable
+			public static ThreadLocal<WebDriver> dr = new ThreadLocal<>();
+		
+			@BeforeMethod
+			public void beforeMethod() {
+				System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "/drivers/chromedriver.exe");
+		
+				// create webDriver
+				WebDriver driver = new ChromeDriver();
+		
+				// give to thread-local to get back copy of it
+				setWebDriver(driver);
+		
+				// with get method we get local copy of object given to thread local -
+				// in our case - we get WebDriver
+				getWebDriver().manage().window().maximize();
+				getWebDriver().manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+			}
+		
+			@AfterMethod
+			public void afterMethod() {
+				getWebDriver().close();
+			}
+		
+			public WebDriver getWebDriver() {
+				return dr.get();
+			}
+		
+			// method to set variable which be copied by thread-local
+			public void setWebDriver(WebDriver driver) {
+				dr.set(driver);
+			}
+		}
 
-
-
+	and test class like
+		import org.openqa.selenium.By;
+		import org.testng.annotations.Test;
+		
+		public class TestWebSite extends SeleniumInitialization {
+		
+			@Test
+			public void test_01() throws InterruptedException {
+				getWebDriver().get("http://w3schools.com");
+				Thread.sleep(5000);
+				getWebDriver().findElement(By.xpath("//*[@id='mySidenav']/a[2]")).click();
+				Thread.sleep(5000);
+				getWebDriver().findElement(By.xpath("//*[@id='topnav']/div/ul/li[3]/a")).click();
+				Thread.sleep(5000);
+			}
+		
+			@Test
+			public void test_02() throws InterruptedException {
+				getWebDriver().get("http://w3schools.com");
+				Thread.sleep(5000);
+				getWebDriver().findElement(By.xpath("//*[@id='mySidenav']/a[2]")).click();
+				Thread.sleep(5000);
+				getWebDriver().findElement(By.xpath("//*[@id='topnav']/div/ul/li[3]/a")).click();
+				Thread.sleep(5000);
+			}		
+		}
+		
 
 =======Git
 	to take changes from git server -> fetch-> synchronize-> pull
