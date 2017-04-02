@@ -33,11 +33,11 @@ public class SeleniumInitialization {
 		getWebDriver().manage().window().maximize();
 		getWebDriver().manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 	}
-
-	@AfterMethod
-	public void afterMethod() {
-		getWebDriver().close();
-	}
+//
+//	@AfterMethod
+//	public void afterMethod() {
+//		getWebDriver().close();
+//	}
 
 	public WebDriver getWebDriver() {
 		return dr.get();

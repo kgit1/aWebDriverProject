@@ -945,3 +945,77 @@
 =======Git
 	to take changes from git server -> fetch-> synchronize-> pull
 	
+	
+	Move cursor
+		1. 
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		        StringBuilder stringBuilder = new StringBuilder();
+		        stringBuilder.append("var x = $('#NavHeader1_tabs_ctl00_btnNavHeaderTab');");
+		        stringBuilder.append("x.click();");
+		        js.executeScript(stringBuilder.toString());	
+		
+		2. 		
+		WebDriver driver = new FirefoxDriver();
+		JavascriptExecutor jse = (JavascriptExecutor)driver;
+		jse.executeScript("document.getElementById('gbqfb').click();");
+		
+		
+		
+		3.		
+		public static void mouseClickByLocator( String cssLocator ) {
+		     String locator = cssLocator;
+		     WebElement el = driver.findElement( By.cssSelector( locator ) );
+		     Actions builder = new Actions(driver);
+		     builder.moveToElement( el ).click( el );
+		     builder.perform();
+		}
+		
+		
+		4.
+		WebElement baseElement = driver.findElement(By.id("foo"));
+		Actions clicker = new Actions(driver);
+		clicker.moveToElement(baseElement).moveByOffset(X, Y).click().perform();
+		
+		
+		5.		
+		public void clickAt(IWebDriver IWebDriver1,IWebElement WebElem, int x, int y)
+		        {
+		            New Action(IWebDriver1)
+		             .MoveToElement(WebElem, 0,0)
+		             .movebyOffSet(x,y)
+		             .click()
+		             .build()
+		             .perform();
+		
+		        }
+		
+		
+		6.
+		new Actions(driver).moveToElement(
+		   canvas, xWithinCanvas, yWithinCanvas).perform();
+		
+		driver.executeScript("$('#diagramCanvas').click();");
+		
+		
+		7.		
+		Actions actionBuilder=new Actions(driver);         
+		Action drawOnCanvas=actionBuilder
+		                .contextClick(wbCanvas)
+		                .moveToElement(wbCanvas,8,8)
+		                .clickAndHold(wbCanvas)
+		                .moveByOffset(120, 120)
+		                .moveByOffset(60,70)
+		                .moveByOffset(-140,-140)
+		                .release(wbCanvas)
+		                .build();
+		drawOnCanvas.perform();
+		
+		
+		8.		
+		org.openqa.selenium.Point coordinates =driver.findElement(By.xpath("//canvas")).getLocation();
+		System.out.println("Co-ordinates"+coordinates); 
+		Robot robot = new Robot();
+		robot.mouseMove(coordinates.getX(),coordinates.getY()); 
+		robot.mousePress( InputEvent.BUTTON1_DOWN_MASK);
+		robot.mouseRelease(InputEvent.BUTTON1_DOWN_MASK);
+	
