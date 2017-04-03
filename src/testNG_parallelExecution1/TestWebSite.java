@@ -1,4 +1,4 @@
-package testNG_parallelExecution;
+package testNG_parallelExecution1;
 
 import org.openqa.selenium.By;
 import org.testng.annotations.Test;

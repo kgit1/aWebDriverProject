@@ -1,4 +1,4 @@
-package testNG_parallelExecution;
+package testNG_parallelExecution1;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;

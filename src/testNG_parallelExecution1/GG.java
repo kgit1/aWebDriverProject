@@ -1,4 +1,4 @@
-package testNG_parallelExecution;
+package testNG_parallelExecution1;
 
 import java.awt.AWTException;
 import java.awt.Robot;

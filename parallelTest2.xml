@@ -3,7 +3,7 @@
 <suite name="SmokeTest" parallel="methods" thread-count="2">
 	<test name="Parallel Tests">
 		<classes>
-			<class name="testNG_parallelExecution1.TestWebSite" />
+			<class name="testNG_parallelExecution2.TestParallel" />
 		</classes>
 	</test>
 </suite>
