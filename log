@@ -983,9 +983,49 @@
 				driver.quit();
 			}
 		}
-		
-		
 
+
+=======Selenium Grid
+	needed to run selenium tests on the set of devices with different OS 
+	and browsers remotely
+	on one computer starting hub and tests - and selenium will check is there 
+	device with started node and needed configuration and run test on it remotely
+	
+	
+	download selenium standalone server
+	start command prompt and cd to folder where server is and run command to
+	register hub
+	java -jar selenium_server_standalone_3.3.1.jar -role hub	
+	
+	open browser on
+		http://localhost:4444/grid/console
+	to check that grid started
+	
+	than start node, same by running in command from folder with stand alone server
+	register node
+	java -jar selenium-server-standalone-3.3.1.jar -role node  -hub http://localhost:4444/grid/register
+	
+	register node with 10 chrome
+	java -jar selenium-server-standalone-3.3.1.jar -port 5556 -role node -hub http://localhost:4444/grid/register -browser "browserName=chrome, version=ANY, maxInstances=10, platform=WINDOWS"
+	
+	register node with 10 chrome and register chrome driver
+	java -Dwebdriver.chrome.driver=D:/JavaProjects/selenium-java-3.3.1/webDrivers/chromedriver.exe -jar selenium-server-standalone-3.3.1.jar -port 5556 -role node -hub http://localhost:4444/grid/register -browser "browserName=chrome, version=ANY, maxInstances=10, platform=WINDOWS" 
+	
+	register node with 10 firefox 
+	java -jar selenium-server-standalone-3.3.1.jar -port 5557 -role node -hub http://localhost:4444/grid/register -browser "browserName=firefox, maxInstances=10, platform=ANY, seleniumProtocol=WebDriver"
+	
+	register node with 10 internetExplorer and register internetExplorer driver
+	java -Dwebdriver.ie.driver=C:/eclipse/IEDriverServer/IEDriverServer.exe -jar selenium-server-standalone-3.3.1.jar -port 5555 -role node -hub http://localhost:4444/grid/register -browser "browserName=internet explorer,version=11,platform=WINDOWS,maxInstances=10"
+	
+	IE, Chrome, Safari & firefox selenium NODE
+	java -Dwebdriver.ie.driver=C:/eclipse/IEDriverServer/IEDriverServer.exe -Dwebdriver.chrome.driver=C:/eclipse/chromedriver/chromedriver.exe -jar selenium-server-standalone-2.48.2.jar -port 5555 -role node -hub http://localhost:4444/grid/register -browser "browserName=firefox, maxInstances=10, platform=ANY, seleniumProtocol=WebDriver" -browser "browserName=internet explorer, version=11, platform=WINDOWS, maxInstances=10" -browser "browserName=chrome,version=ANY,maxInstances=10,platform=WINDOWS"
+	
+	
+	shut down firewall can be needed to let nodes register
+	
+	parameter "node" in command can be replaced by "webdriver" or "rc" but 
+	not needed because node handle both of them
+	
 =======Git
 	to take changes from git server -> fetch-> synchronize-> pull
 	
@@ -1086,4 +1126,22 @@
 				}
 			}
 		}
+		
+		
+		
+		
+	for IE and CHROME browsers we need to register webdriver location along 
+	with node starting	
+	
+	Chrome browser
+		java -Dwebdriver.chrome.driver=chromedriver.exe -jar selenium-server-standalone-3.3.1.jar -role webdriver -hub
+		http://localhost:4444/grid/register -port 5558 -browser browserName=chrome
+	
+	InternetExplorer browser
+		java -Dwebdriver.ie.driver=IEDriverServer.exe -jar selenium-server-standalone-3.3.1.jar -role webdriver -hub
+		http://localhost:4444/grid/register -port 5558 -browser browserName=iexplorer
+	
+	Firefox browser
+		java -jar selenium-server-standalone-3.3.1.jar -role webdriver -hub http://localhost:4444/grid/register -port 5556 -browser browserName=firefox	
+	
 	
