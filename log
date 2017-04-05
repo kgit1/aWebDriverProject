@@ -1100,7 +1100,7 @@
 		java -jar selenium-server-standalone-3.3.1.jar -role node -nodeConfig grid_node1.json
 	
 	node command with chrome and firefox driver for command prompt
-	java -Dwebdriver.chrome.driver=D:/JavaProjects/selenium-java-3.3.1/webDrivers/chromedriver.exe -Dwebdriver.firefox.driver=D:/JavaProjects/selenium-java-3.3.1/webDrivers/geckodriver.exe -jar selenium-server-standalone-3.3.1.jar -role node -nodeConfig grid_node1.json
+	java -Dwebdriver.chrome.driver=D:/JavaProjects/selenium-java-3.3.1/webDrivers/chromedriver.exe -Dwebdriver.gecko.driver=D:/JavaProjects/selenium-java-3.3.1/webDrivers/geckodriver.exe -jar selenium-server-standalone-3.3.1.jar -role node -nodeConfig grid_node1.json
 	
 	
 =======Git
