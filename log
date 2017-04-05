@@ -1099,6 +1099,10 @@
 	node command for command prompt
 		java -jar selenium-server-standalone-3.3.1.jar -role node -nodeConfig grid_node1.json
 	
+	node command with chrome and firefox driver for command prompt
+	java -Dwebdriver.chrome.driver=D:/JavaProjects/selenium-java-3.3.1/webDrivers/chromedriver.exe -Dwebdriver.firefox.driver=D:/JavaProjects/selenium-java-3.3.1/webDrivers/geckodriver.exe -jar selenium-server-standalone-3.3.1.jar -role node -nodeConfig grid_node1.json
+	
+	
 =======Git
 	to take changes from git server -> fetch-> synchronize-> pull
 	

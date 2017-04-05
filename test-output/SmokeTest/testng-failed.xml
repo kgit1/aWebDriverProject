@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite thread-count="2" guice-stage="DEVELOPMENT" name="Failed suite [SmokeTest]" parallel="methods">
-  <test name="Parallel Tests(failed)" parallel="methods">
+  <test name="Parallel Tests Firefox(failed)" parallel="methods">
+    <parameter name="myBrowser" value="firefox"/>
     <classes>
-      <class name="testNG_parallelExecution.TestWebSite">
+      <class name="testNG_grid.ParallelTest">
         <methods>
+          <include name="testLogin"/>
           <include name="afterMethod"/>
           <include name="beforeMethod"/>
-          <include name="test_02"/>
-          <include name="test_01"/>
         </methods>
-      </class> <!-- testNG_parallelExecution.TestWebSite -->
+      </class> <!-- testNG_grid.ParallelTest -->
     </classes>
-  </test> <!-- Parallel Tests(failed) -->
+  </test> <!-- Parallel Tests Firefox(failed) -->
 </suite> <!-- Failed suite [SmokeTest] -->

@@ -1,35 +1,185 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
+<testng-results skipped="1" failed="0" ignored="0" total="2" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="SmokeTest" duration-ms="11040" started-at="2017-04-03T19:46:09Z" finished-at="2017-04-03T19:46:20Z">
+  <suite name="SmokeTest" duration-ms="12163" started-at="2017-04-05T02:29:31Z" finished-at="2017-04-05T02:29:43Z">
     <groups>
     </groups>
-    <test name="Parallel Tests" duration-ms="11040" started-at="2017-04-03T19:46:09Z" finished-at="2017-04-03T19:46:20Z">
-      <class name="testNG_parallelExecution2.TestParallel">
-        <test-method status="PASS" signature="test_01(java.lang.String)[pri:0, instance:testNG_parallelExecution2.TestParallel@1bce4f0a]" name="test_01" duration-ms="5809" started-at="2017-04-03T22:46:09Z" data-provider="getData" finished-at="2017-04-03T22:46:14Z">
+    <test name="Parallel Tests Firefox" duration-ms="446" started-at="2017-04-05T02:29:31Z" finished-at="2017-04-05T02:29:31Z">
+      <class name="testNG_grid.ParallelTest">
+        <test-method status="FAIL" signature="beforeMethod(java.lang.String)[pri:0, instance:testNG_grid.ParallelTest@4f7d0008]" name="beforeMethod" is-config="true" duration-ms="425" started-at="2017-04-05T05:29:31Z" finished-at="2017-04-05T05:29:31Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[test1]]>
+                <![CDATA[firefox]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.SessionNotCreatedException">
+            <message>
+              <![CDATA[The path to the driver executable must be set by the webdriver.gecko.driver system property; for more information, see https://github.com/mozilla/geckodriver. The latest version can be downloaded from https://github.com/mozilla/geckodriver/releases
+Command duration or timeout: 0 milliseconds
+Build info: version: 'unknown', revision: '5234b32', time: '2017-03-10 09:00:17 -0800'
+System info: host: 'DESKONE', ip: '192.168.0.159', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_121'
+Driver info: driver.version: RemoteWebDriver]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.SessionNotCreatedException: The path to the driver executable must be set by the webdriver.gecko.driver system property; for more information, see https://github.com/mozilla/geckodriver. The latest version can be downloaded from https://github.com/mozilla/geckodriver/releases
+Command duration or timeout: 0 milliseconds
+Build info: version: 'unknown', revision: '5234b32', time: '2017-03-10 09:00:17 -0800'
+System info: host: 'DESKONE', ip: '192.168.0.159', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_121'
+Driver info: driver.version: RemoteWebDriver
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:216)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:168)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:367)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:113)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:141)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:604)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:244)
+	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:131)
+	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:158)
+	at testNG_grid.SeleniumInitialization.beforeMethod(SeleniumInitialization.java:46)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:523)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:224)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:599)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:869)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1193)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.lang.IllegalStateException: The path to the driver executable must be set by the webdriver.gecko.driver system property; for more information, see https://github.com/mozilla/geckodriver. The latest version can be downloaded from https://github.com/mozilla/geckodriver/releases
+	at com.google.common.base.Preconditions.checkState(Preconditions.java:738)
+	at org.openqa.selenium.remote.service.DriverService.findExecutable(DriverService.java:111)
+	at org.openqa.selenium.firefox.GeckoDriverService.access$100(GeckoDriverService.java:38)
+	at org.openqa.selenium.firefox.GeckoDriverService$Builder.findDefaultExecutable(GeckoDriverService.java:112)
+	at org.openqa.selenium.remote.service.DriverService$Builder.build(DriverService.java:302)
+	at org.openqa.selenium.firefox.FirefoxDriver.toExecutor(FirefoxDriver.java:233)
+	at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:125)
+	at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:150)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.server.FirefoxDriverProvider.callConstructor(FirefoxDriverProvider.java:81)
+	at org.openqa.selenium.remote.server.FirefoxDriverProvider.newInstance(FirefoxDriverProvider.java:63)
+	at org.openqa.selenium.remote.server.DefaultDriverFactory.newInstance(DefaultDriverFactory.java:60)
+	at org.openqa.selenium.remote.server.DefaultSession$BrowserCreator.call(DefaultSession.java:222)
+	at org.openqa.selenium.remote.server.DefaultSession$BrowserCreator.call(DefaultSession.java:209)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at org.openqa.selenium.remote.server.DefaultSession$1.run(DefaultSession.java:176)
+	... 3 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.SessionNotCreatedException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="SKIP" signature="testLogin()[pri:0, instance:testNG_grid.ParallelTest@4f7d0008]" name="testLogin" duration-ms="0" started-at="2017-04-05T05:29:31Z" finished-at="2017-04-05T05:29:31Z">
+          <exception class="org.openqa.selenium.SessionNotCreatedException">
+            <message>
+              <![CDATA[The path to the driver executable must be set by the webdriver.gecko.driver system property; for more information, see https://github.com/mozilla/geckodriver. The latest version can be downloaded from https://github.com/mozilla/geckodriver/releases
+Command duration or timeout: 0 milliseconds
+Build info: version: 'unknown', revision: '5234b32', time: '2017-03-10 09:00:17 -0800'
+System info: host: 'DESKONE', ip: '192.168.0.159', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_121'
+Driver info: driver.version: RemoteWebDriver]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.SessionNotCreatedException: The path to the driver executable must be set by the webdriver.gecko.driver system property; for more information, see https://github.com/mozilla/geckodriver. The latest version can be downloaded from https://github.com/mozilla/geckodriver/releases
+Command duration or timeout: 0 milliseconds
+Build info: version: 'unknown', revision: '5234b32', time: '2017-03-10 09:00:17 -0800'
+System info: host: 'DESKONE', ip: '192.168.0.159', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_121'
+Driver info: driver.version: RemoteWebDriver
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:216)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:168)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:367)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:113)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:141)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:604)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:244)
+	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:131)
+	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:158)
+	at testNG_grid.SeleniumInitialization.beforeMethod(SeleniumInitialization.java:46)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:523)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:224)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:599)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:869)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1193)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.lang.IllegalStateException: The path to the driver executable must be set by the webdriver.gecko.driver system property; for more information, see https://github.com/mozilla/geckodriver. The latest version can be downloaded from https://github.com/mozilla/geckodriver/releases
+	at com.google.common.base.Preconditions.checkState(Preconditions.java:738)
+	at org.openqa.selenium.remote.service.DriverService.findExecutable(DriverService.java:111)
+	at org.openqa.selenium.firefox.GeckoDriverService.access$100(GeckoDriverService.java:38)
+	at org.openqa.selenium.firefox.GeckoDriverService$Builder.findDefaultExecutable(GeckoDriverService.java:112)
+	at org.openqa.selenium.remote.service.DriverService$Builder.build(DriverService.java:302)
+	at org.openqa.selenium.firefox.FirefoxDriver.toExecutor(FirefoxDriver.java:233)
+	at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:125)
+	at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:150)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.server.FirefoxDriverProvider.callConstructor(FirefoxDriverProvider.java:81)
+	at org.openqa.selenium.remote.server.FirefoxDriverProvider.newInstance(FirefoxDriverProvider.java:63)
+	at org.openqa.selenium.remote.server.DefaultDriverFactory.newInstance(DefaultDriverFactory.java:60)
+	at org.openqa.selenium.remote.server.DefaultSession$BrowserCreator.call(DefaultSession.java:222)
+	at org.openqa.selenium.remote.server.DefaultSession$BrowserCreator.call(DefaultSession.java:209)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at org.openqa.selenium.remote.server.DefaultSession$1.run(DefaultSession.java:176)
+	... 3 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.SessionNotCreatedException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testLogin -->
+      </class> <!-- testNG_grid.ParallelTest -->
+    </test> <!-- Parallel Tests Firefox -->
+    <test name="Parallel Tests Chrome" duration-ms="11680" started-at="2017-04-05T02:29:31Z" finished-at="2017-04-05T02:29:43Z">
+      <class name="testNG_grid.ParallelTest">
+        <test-method status="PASS" signature="beforeMethod(java.lang.String)[pri:0, instance:testNG_grid.ParallelTest@ff5b51f]" name="beforeMethod" is-config="true" duration-ms="3020" started-at="2017-04-05T05:29:31Z" finished-at="2017-04-05T05:29:34Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- test_01 -->
-        <test-method status="PASS" signature="test_01(java.lang.String)[pri:0, instance:testNG_parallelExecution2.TestParallel@1bce4f0a]" name="test_01" duration-ms="5207" started-at="2017-04-03T22:46:14Z" data-provider="getData" finished-at="2017-04-03T22:46:20Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[test2]]>
-              </value>
-            </param>
-          </params>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="testLogin()[pri:0, instance:testNG_grid.ParallelTest@ff5b51f]" name="testLogin" duration-ms="6343" started-at="2017-04-05T05:29:34Z" finished-at="2017-04-05T05:29:40Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- test_01 -->
-      </class> <!-- testNG_parallelExecution2.TestParallel -->
-    </test> <!-- Parallel Tests -->
+        </test-method> <!-- testLogin -->
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:testNG_grid.ParallelTest@ff5b51f]" name="afterMethod" is-config="true" duration-ms="2315" started-at="2017-04-05T05:29:40Z" finished-at="2017-04-05T05:29:43Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+      </class> <!-- testNG_grid.ParallelTest -->
+    </test> <!-- Parallel Tests Chrome -->
   </suite> <!-- SmokeTest -->
 </testng-results>

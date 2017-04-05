@@ -38,7 +38,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" class="navigator-link" panel-name="suite-SmokeTest">
-              <span class="suite-name border-passed">SmokeTest</span>
+              <span class="suite-name border-skipped">SmokeTest</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -49,12 +49,12 @@
               <ul>
                 <li>
                   <a href="#" class="navigator-link " panel-name="test-xml-SmokeTest">
-                    <span>D:\J\workspace\aWebDriverProject\parallelTest2.xml</span>
+                    <span>D:\J\workspace\aWebDriverProject\parallelTestGrid.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
                   <a href="#" class="navigator-link " panel-name="testlist-SmokeTest">
-                    <span class="test-stats">1 test</span>
+                    <span class="test-stats">2 tests</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -91,7 +91,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">2 methods,   2 passed</span>
+                    <span class="method-stats">2 methods,  1 skipped,  1 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title skipped">Skipped methods</span>
+                    <span class="show-or-hide-methods skipped">
+                      <a href="#" panel-name="suite-SmokeTest" class="hide-methods skipped suite-SmokeTest"> (hide)</a> <!-- hide-methods skipped suite-SmokeTest -->
+                      <a href="#" panel-name="suite-SmokeTest" class="show-methods skipped suite-SmokeTest"> (show)</a> <!-- show-methods skipped suite-SmokeTest -->
+                    </span>
+                    <div class="method-list-content skipped suite-SmokeTest">
+                      <span>
+                        <img width="3%" src="skipped.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-SmokeTest" title="testNG_grid.ParallelTest" hash-for-method="testLogin">testLogin</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content skipped suite-SmokeTest -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -102,12 +116,7 @@
                     <div class="method-list-content passed suite-SmokeTest">
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-SmokeTest" title="testNG_parallelExecution2.TestParallel" hash-for-method="test_01(test1)">test_01(test1)</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-SmokeTest" title="testNG_parallelExecution2.TestParallel" hash-for-method="test_01(test2)">test_01(test2)</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-SmokeTest" title="testNG_grid.ParallelTest" hash-for-method="testLogin">testLogin</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-SmokeTest -->
@@ -122,26 +131,69 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-SmokeTest" class="panel SmokeTest">
-          <div class="suite-SmokeTest-class-passed">
+          <div class="suite-SmokeTest-class-skipped">
             <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">testNG_parallelExecution2.TestParallel</span>
+              <img src="skipped.png"/>
+              <span class="class-name">testNG_grid.ParallelTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="test_01(test1)">
-                  </a> <!-- test_01(test1) -->
-                  <span class="method-name">test_01</span>
-                  <span class="parameters">(test1)</span>
+                  <a name="testLogin">
+                  </a> <!-- testLogin -->
+                  <span class="method-name">testLogin</span>
+                  <div class="stack-trace">org.openqa.selenium.SessionNotCreatedException: The path to the driver executable must be set by the webdriver.gecko.driver system property; for more information, see https://github.com/mozilla/geckodriver. The latest version can be downloaded from https://github.com/mozilla/geckodriver/releases
+Command duration or timeout: 0 milliseconds
+Build info: version: &apos;unknown&apos;, revision: &apos;5234b32&apos;, time: &apos;2017-03-10 09:00:17 -0800&apos;
+System info: host: &apos;DESKONE&apos;, ip: &apos;192.168.0.159&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_121&apos;
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:216)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:168)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:367)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:113)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:141)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:604)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:244)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:131)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:158)
+	at testNG_grid.SeleniumInitialization.beforeMethod(SeleniumInitialization.java:46)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.lang.IllegalStateException: The path to the driver executable must be set by the webdriver.gecko.driver system property; for more information, see https://github.com/mozilla/geckodriver. The latest version can be downloaded from https://github.com/mozilla/geckodriver/releases
+	at com.google.common.base.Preconditions.checkState(Preconditions.java:738)
+	at org.openqa.selenium.remote.service.DriverService.findExecutable(DriverService.java:111)
+	at org.openqa.selenium.firefox.GeckoDriverService.access$100(GeckoDriverService.java:38)
+	at org.openqa.selenium.firefox.GeckoDriverService$Builder.findDefaultExecutable(GeckoDriverService.java:112)
+	at org.openqa.selenium.remote.service.DriverService$Builder.build(DriverService.java:302)
+	at org.openqa.selenium.firefox.FirefoxDriver.toExecutor(FirefoxDriver.java:233)
+	at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:125)
+	at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:150)
+	at org.openqa.selenium.remote.server.FirefoxDriverProvider.callConstructor(FirefoxDriverProvider.java:81)
+	at org.openqa.selenium.remote.server.FirefoxDriverProvider.newInstance(FirefoxDriverProvider.java:63)
+	at org.openqa.selenium.remote.server.DefaultDriverFactory.newInstance(DefaultDriverFactory.java:60)
+	at org.openqa.selenium.remote.server.DefaultSession$BrowserCreator.call(DefaultSession.java:222)
+	at org.openqa.selenium.remote.server.DefaultSession$BrowserCreator.call(DefaultSession.java:209)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at org.openqa.selenium.remote.server.DefaultSession$1.run(DefaultSession.java:176)
+	... 3 more
+... Removed 20 stack frames
+</div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-SmokeTest-class-skipped -->
+          <div class="suite-SmokeTest-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">testNG_grid.ParallelTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="test_01(test2)">
-                  </a> <!-- test_01(test2) -->
-                  <span class="method-name">test_01</span>
-                  <span class="parameters">(test2)</span>
+                  <a name="testLogin">
+                  </a> <!-- testLogin -->
+                  <span class="method-name">testLogin</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -149,18 +201,25 @@
         </div> <!-- panel SmokeTest -->
         <div panel-name="test-xml-SmokeTest" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">D:\J\workspace\aWebDriverProject\parallelTest2.xml</span>
+            <span class="header-content">D:\J\workspace\aWebDriverProject\parallelTestGrid.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;http://testng.org/testng-1.0.dtd&quot;&gt;
 &lt;suite thread-count=&quot;2&quot; guice-stage=&quot;DEVELOPMENT&quot; name=&quot;SmokeTest&quot; parallel=&quot;methods&quot;&gt;
-  &lt;test name=&quot;Parallel Tests&quot;&gt;
+  &lt;test name=&quot;Parallel Tests Firefox&quot;&gt;
+    &lt;parameter name=&quot;myBrowser&quot; value=&quot;firefox&quot;/&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;testNG_parallelExecution2.TestParallel&quot;/&gt;
+      &lt;class name=&quot;testNG_grid.ParallelTest&quot;/&gt;
     &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- Parallel Tests --&gt;
+  &lt;/test&gt; &lt;!-- Parallel Tests Firefox --&gt;
+  &lt;test name=&quot;Parallel Tests Chrome&quot;&gt;
+    &lt;parameter name=&quot;myBrowser&quot; value=&quot;chrome&quot;/&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;testNG_grid.ParallelTest&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- Parallel Tests Chrome --&gt;
 &lt;/suite&gt; &lt;!-- SmokeTest --&gt;
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -172,7 +231,10 @@
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">Parallel Tests (1 class)</span>
+                <span class="test-name">Parallel Tests Firefox (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">Parallel Tests Chrome (1 class)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -200,18 +262,18 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(2);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'test_01')
-data.setCell(0, 2, 'testNG_parallelExecution2.TestParallel')
-data.setCell(0, 3, 5809);
+data.setCell(0, 1, 'testLogin')
+data.setCell(0, 2, 'testNG_grid.ParallelTest')
+data.setCell(0, 3, 6343);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'test_01')
-data.setCell(1, 2, 'testNG_parallelExecution2.TestParallel')
-data.setCell(1, 3, 5207);
+data.setCell(1, 1, 'testLogin')
+data.setCell(1, 2, 'testNG_grid.ParallelTest')
+data.setCell(1, 3, 0);
 window.suiteTableData['SmokeTest']= { tableData: data, tableDiv: 'times-div-SmokeTest'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 11 seconds</span>
+              <span class="suite-total-time">Total running time: 6 seconds</span>
               <div id="times-div-SmokeTest">
               </div> <!-- times-div-SmokeTest -->
             </div> <!-- times-div -->
@@ -237,15 +299,25 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">testNG_parallelExecution2.TestParallel</div> <!-- chronological-class-name -->
-              <div class="test-method">
-                <span class="method-name">test_01(test1)</span>
+              <div class="chronological-class-name">testNG_grid.ParallelTest</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">beforeMethod(firefox)</span>
                 <span class="method-start">0 ms</span>
-              </div> <!-- test-method -->
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">beforeMethod(chrome)</span>
+                <span class="method-start">471 ms</span>
+              </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">test_01(test2)</span>
-                <span class="method-start">5810 ms</span>
+                <span class="method-name">testLogin</span>
+                <span class="method-start">3491 ms</span>
               </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">afterMethod</span>
+                <span class="method-start">9835 ms</span>
+              </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
       </div> <!-- main-panel-root -->

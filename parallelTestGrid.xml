@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="SmokeTest" parallel="methods" thread-count="2">
+	<test name="Parallel Tests Firefox">
+	<parameter name="myBrowser" value="firefox"/>
+		<classes>
+			<class name="testNG_grid.ParallelTest" />
+		</classes>
+	</test>
+	<test name="Parallel Tests Chrome">
+	<parameter name="myBrowser" value="chrome"/>
+		<classes>
+			<class name="testNG_grid.ParallelTest" />
+		</classes>
+	</test>
+</suite>
