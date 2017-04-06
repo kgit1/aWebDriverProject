@@ -20,7 +20,7 @@ public class SeleniumInitialization {
 
 	@BeforeMethod
 	public void beforeMethod() {
-		System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "/drivers/chromedriver.exe");
+//		System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "/drivers/chromedriver.exe");
 
 		// create webDriver
 		WebDriver driver = new ChromeDriver();

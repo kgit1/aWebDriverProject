@@ -990,7 +990,9 @@
 	and browsers remotely
 	on one computer starting hub and tests - and selenium will check is there 
 	device with started node and needed configuration and run test on it remotely
-	
+	you can't choose on which remote test will be executed, if there 2 or more 
+	remotes with same browser and platform defined in test case - grid will 
+	chose by himself on which machine to start the test, you can't hard write it
 	
 	download selenium standalone server
 	start command prompt and cd to folder where server is and run command to
